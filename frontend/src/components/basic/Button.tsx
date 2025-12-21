@@ -24,13 +24,16 @@ export const Button = ({
     useTheme();
 
     // 1. Use Arbitrary Values (Square brackets)
-    // tailwind knows "bg-[...]" means "set background color to this value"
-    const baseStyles = "inline-flex items-center justify-center px-6 py-3 font-semibold shadow-lg transition transform hover:scale-105 active:scale-95 rounded-[var(--ai-radius)]";
+// Inside Button.tsx
+// Update baseStyles:
+    const baseStyles = "inline-flex items-center justify-center px-6 py-3 font-semibold shadow-lg transition transform hover:scale-105 active:scale-95 rounded-[var(--ai-radius)] border-[length:var(--ai-border-width)] font-[family-name:var(--ai-font)]";
 
+// Update variants to include border colors
     const variants = {
-        // Direct mapping to the CSS variables we injected
-        primary: "bg-[var(--ai-primary)] hover:bg-[var(--ai-primary-hover)] text-[var(--ai-text)]",
-        secondary: "bg-[var(--ai-secondary)] hover:bg-[var(--ai-secondary-hover)] text-white",
+        primary: "bg-[var(--ai-primary)] hover:bg-[var(--ai-primary-hover)] text-[var(--ai-text)] border-transparent",
+
+        // Secondary often looks good as an 'outline' style in some themes
+        secondary: "bg-[var(--ai-secondary)] hover:bg-[var(--ai-secondary-hover)] text-white border-transparent",
     };
 
     const combinedStyles = cn(baseStyles, variants[variant], className);

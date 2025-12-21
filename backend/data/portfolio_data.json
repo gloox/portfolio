@@ -5,6 +5,7 @@
     "title": "Computer Science Honours Student & Software Developer",
     "email": "loombag@myumanitoba.ca",
     "welcome-text": "Hi, refresh the website and see something cool happen!",
+    "location": "Winnipeg",
     "summary": "Highly motivated Computer Science student with a strong academic record and practical experience in full-stack development, database design, and workflow automation. Proven ability to independently manage the full software development lifecycle, leading to significant improvements in user efficiency."
   },
   "education": [
@@ -22,11 +23,23 @@
   ],
   "experience": [
     {
+      "company": "Agriculture and Agri Food Canada",
+      "role": "Systems Step Student",
+      "dates": "Sep. to Dec. 2025 (Full-Time)",
+      "location": "Winnipeg, MB (Implicit)",
+      "description": "Full-stack development in a small team working on two major production websites.",
+      "bullets": [
+        "Migrated the front-end for FIGE from Vue 2 to Vue 3 solo",
+        "Front-end design and implementation for multiple production websites, particularly a modular React Notifications System",
+        ""
+      ]
+    },
+    {
       "company": "Public Guardian And Trustee of Manitoba",
       "role": "Systems Step Student",
       "dates": "Apr. 2024 – Aug. 2024 (Full-Time); Jan. 2025 - Apr. 2025 (Full-Time); Sep. 2024 – Dec. 2024 (Part-Time)",
       "location": "Winnipeg, MB (Implicit)",
-      "description": "Managed the full software development lifecycle for internal tools and collaborated on core enterprise applications.",
+      "description": "Managed the full software development lifecycle for internal windows tools and collaborated on core enterprise applications.",
       "bullets": [
         "Developed and launched an internal .NET/WinForms search engine tool, independently managing its lifecycle over two months, significantly improving the mail department's efficiency via a unified and intuitive user interface.",
         "Implemented advanced features in the search tool, including fuzzy search and asynchronous caching capabilities, resulting in extremely positive user feedback.",
@@ -77,10 +90,16 @@
   ],
   "skills": {
     "languages": ["C#", "Java", "MySQL", "SQLite", "Python", "JavaScript", "HTML/CSS", "C", "C++"],
-    "librariesFrameworks": [".NET", "Winforms", "Syncfusion", "React", "pygame"],
-    "developmentTools": ["Visual Studio", "Jira", "Azure DevOps Server", "GitHub", "Microsoft SQL Server", "Laserfiche", "VS Code"]
+    "librariesFrameworks": ["Vue 2/3", "React", ".NET", "Winforms", "Syncfusion", "pygame"],
+    "developmentTools": ["Podman","Visual Studio", "Jira", "Azure DevOps Server", "GitHub", "Microsoft SQL Server", "Laserfiche", "VS Code"]
   },
   "extracurricular": [
+    {
+      "activity": "CSSA Game Jame 2025: Crabby Game",
+      "organization": "University Of Manitoba",
+      "date": "Nov. 2025",
+      "details": "Won audience choice and most potential (based on highest critic ratings on game quality and game mechanics) for the CSSA Game Jam 2025: Crabby Game."
+    },
     {
       "activity": "CSSA Capture the Flag Competition",
       "organization": "University Of Manitoba",

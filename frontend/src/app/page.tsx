@@ -3,9 +3,15 @@
 import React, { useEffect, useState } from 'react';
 import { PortfolioData } from '@/types';
 import IntroSection from '@/components/IntroSection';
-import ExperienceSection from '@/components/unused/ExperienceSection';
-import ProjectsSection from '@/components/unused/ProjectsSection';
-import SkillsSection from '@/components/unused/SkillsSection';
+import { HomeHeader } from '@/components/HomeHeader';
+import { Text } from '@/components/basic/Text';
+import { Typewriter } from '@/components/basic/TypeWriterAnimation';
+import { Button } from '@/components/basic/Button';
+import { ExperienceSection } from '@/components/ExperienceSection';
+import { ProjectsSection } from '@/components/ProjectsSection';
+import { SkillsSection } from '@/components/SkillsSection';
+import {EducationSection} from "@/components/EducationSection";
+import PopIn from "@/components/basic/PopIn";
 
 // NOTE: Ensure your .env.local file has this defined
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
@@ -15,66 +21,121 @@ const PortfolioPage = () => {
   const [data, setData] = useState<PortfolioData | null>(null);
   const [loading, setLoading] = useState(true);
 
+  // Stages: 'intro' | 'transition' | 'home'
+  const [stage, setStage] = useState<'intro' | 'transition' | 'home'>('intro');
+
+  // 1. Load Data & Check "Cookie" on Mount
   useEffect(() => {
-    const fetchData = async () => {
+    const init = async () => {
+      // Check if user has already visited
+      const hasVisited = localStorage.getItem('portfolio_intro_completed');
+      if (hasVisited) {
+        setStage('home');
+      }
+
+      // Fetch Data
       try {
-        console.log("Fetching data from:", API_URL);
         const response = await fetch(API_URL);
-
-        if (!response.ok) {
-          // Optional: handle HTTP errors specific logic
-        }
-
         const result: PortfolioData = await response.json();
         setData(result);
-
-        console.log(result)
       } catch (error) {
-        console.error("Error fetching data. Is the FastAPI backend running on port 8000?", error);
-
-        // Set placeholder data on error so the UI still renders
-        setData({
-          error: "Failed to load data. Please ensure the backend server is running.",
-          personal: { firstName: '', title: '', email: '', phone: '' },
-          experience: [],
-          projects: []
-        });
+        console.error("Error fetching data", error);
+        // Add fallback data handling here if needed
       } finally {
         setLoading(false);
       }
     };
-
-    fetchData();
+    init();
   }, []);
 
-  const hasError = data && data.error;
+  // 2. Callback when Intro is "Done" (Theme selected)
+  const handleIntroComplete = () => {
+    // Move to transition stage (The fun text)
+    setStage('transition');
+  };
 
-  // 1. Loading State
-  if (loading) return (
-      <div className="p-16 text-center text-xl text-indigo-500 font-semibold bg-white dark:bg-gray-950">
-        Loading portfolio data...
-      </div>
-  );
+  // 3. Callback to finish Transition and go Home
+  const finishTransition = () => {
+    localStorage.setItem('portfolio_intro_completed', 'true');
+    setStage('home');
+  };
 
-  // 2. Error State (Backend Down)
-  if (hasError) return (
-      <div className="p-16 text-center text-xl text-red-600 font-bold bg-white dark:bg-gray-950">
-        {data.error}
-      </div>
-  );
+  if (loading || !data) return <div className="p-20 text-center">Loading...</div>;
 
-  // 3. Safety check
-  if (!data) return null;
+  // --- VIEW 1: INTRO ---
+  if (stage === 'intro') {
+    return (
+        <IntroSection
+            personal={data.personal}
+            onComplete={handleIntroComplete} // Pass this down to IntroSection
+        />
+    );
+  }
 
+  // --- VIEW 2: TRANSITION TEXT ---
+  if (stage === 'transition') {
+    return (
+        <section className="min-h-screen flex flex-col justify-center items-center px-10 max-w-4xl mx-auto space-y-8 animate-in fade-in duration-1000">
+          <div className="space-y-6">
+            <Text variant="h2">
+              <Typewriter
+                  text={`Ok, that was fun. Fun fact: this is actually a website to try to get ${data.personal.firstName} hired.`}
+                  delay={0.1}
+              />
+            </Text>
+            <Text variant="h2" className="mt-4">
+              <Typewriter
+                  text="Now, here's another textbox. Ask it any questions about me. It'll answer mostly honestly, but let's be honest, it is AI."
+                  delay={3.5} // Wait for first sentence to finish
+              />
+            </Text>
+            <Text variant="h3" className="opacity-60 mt-4">
+              <Typewriter
+                  text="(And look around this website you've designed!)"
+                  delay={8.0}
+              />
+            </Text>
+          </div>
+
+
+          <PopIn delay={10}>
+            <Button onClick={finishTransition} >
+              Let's Go
+            </Button>
+          </PopIn>
+
+        </section>
+    );
+  }
+
+  // --- VIEW 3: HOME ---
   return (
-      // className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8"
-      <main >
-        <IntroSection personal={data.personal} />
-        {/*<HeaderSection experiences={data.personal} />*/}
-        {/*<ExperienceSection experiences={data.experience} />*/}
-        {/*<ProjectsSection projects={data.projects} />*/}
-        {/*<SkillsSection />*/}
-      </main>
+      <div
+
+          className={`
+            /* 1. APPLY THE BACKGROUND & TEXT COLORS HERE */
+            bg-[var(--ai-background)] 
+            text-[var(--ai-text)]
+            
+            /* 2. ENSURE IT COVERS THE FULL SCREEN */
+            min-h-screen
+            
+            /* 3. SMOOTH TRANSITION */
+            transition-colors duration-500
+        `}
+      >
+        <HomeHeader personal={data.personal} education={data.education}/>
+
+        {/* Pass data to the new sections */}
+        {data.education && <EducationSection education={data.education} />}
+
+        <ExperienceSection experiences={data.experience} />
+        <ProjectsSection projects={data.projects} />
+        <SkillsSection
+            skills={data.skills}
+            extracurricular={data.extracurricular}
+        />
+      </div>
   );
 };
 
