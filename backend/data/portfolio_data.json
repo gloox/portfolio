@@ -1,0 +1,91 @@
+{
+  "personal": {
+    "firstName": "Geet",
+    "lastName": "Loomba",
+    "title": "Computer Science Honours Student & Software Developer",
+    "email": "loombag@myumanitoba.ca",
+    "welcome-text": "Hi, refresh the website and see something cool happen!",
+    "summary": "Highly motivated Computer Science student with a strong academic record and practical experience in full-stack development, database design, and workflow automation. Proven ability to independently manage the full software development lifecycle, leading to significant improvements in user efficiency."
+  },
+  "education": [
+    {
+      "institution": "University Of Manitoba",
+      "degree": "Bachelor of Computer Science Honours (Co-op Option)",
+      "startDate": "Sept. 2022",
+      "endDate": "Present",
+      "gpa": "4.11 / 4.50",
+      "highlights": [
+        "Dean’s Honour List (Fall 2022, Winter 2023)",
+        "Hogg Centennial Entrance Scholarship (Sept. 2022)"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "company": "Public Guardian And Trustee of Manitoba",
+      "role": "Systems Step Student",
+      "dates": "Apr. 2024 – Aug. 2024 (Full-Time); Jan. 2025 - Apr. 2025 (Full-Time); Sep. 2024 – Dec. 2024 (Part-Time)",
+      "location": "Winnipeg, MB (Implicit)",
+      "description": "Managed the full software development lifecycle for internal tools and collaborated on core enterprise applications.",
+      "bullets": [
+        "Developed and launched an internal .NET/WinForms search engine tool, independently managing its lifecycle over two months, significantly improving the mail department's efficiency via a unified and intuitive user interface.",
+        "Implemented advanced features in the search tool, including fuzzy search and asynchronous caching capabilities, resulting in extremely positive user feedback.",
+        "Collaborated with a senior developer on a large .NET/WinForms application, contributing heavily to UI iteration, database design, and feature development.",
+        "Proposed and implemented database optimizations that reduced data redundancy and improved overall database safety and integrity.",
+        "Engineered features to streamline daily operations within the large .NET/WinForms codebase.",
+        "Automated and optimized accounting workflows using Laserfiche with JavaScript and CSS.",
+        "Implemented VBA processes for automated data updates and imports to improve database integrity."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Grind Fuel Project Manager",
+      "role": "Project Manager (Software Engineering Group Project)",
+      "dates": "May 2025 – Current",
+      "technologies": ["MySQL", "Java", "Swing"],
+      "description": "Developing a project management software using Java (Swing), applying core software engineering principles."
+    },
+    {
+      "name": "GROCER",
+      "role": "Collaborative Developer (Human Computer Interaction Group Project)",
+      "dates": "Sep. 2024 – Dec. 2024",
+      "technologies": ["JavaScript", "HTML/CSS"],
+      "description": "Collaboratively developed a grocery website using an iterative user-oriented design process through user stories, interviews, paper prototypes, and a horizontal prototype."
+    },
+    {
+      "name": "SchoolTools",
+      "role": "Collaborative Developer (Web App Project)",
+      "dates": "Apr. 2023 – Jan. 2025",
+      "technologies": ["React", "JavaScript", "HTML/CSS"],
+      "description": "Developed features for a web application, including a grade calculator, PDF merger, and PDF-to-text converter."
+    },
+    {
+      "name": "Movie Analysis Database",
+      "role": "Developer (Databases Group Project)",
+      "dates": "Sept. 2023 – Dec. 2023",
+      "technologies": ["MySQL", "Java"],
+      "description": "Designed and developed a normalized database, including a console interface and 40 complex SQL queries."
+    },
+    {
+      "name": "Pixel Chess",
+      "role": "Developer",
+      "dates": "2021, Jan. 2024",
+      "technologies": ["Python", "pygame"],
+      "description": "Created a local multiplayer chess application with an interactive Pygame interface."
+    }
+  ],
+  "skills": {
+    "languages": ["C#", "Java", "MySQL", "SQLite", "Python", "JavaScript", "HTML/CSS", "C", "C++"],
+    "librariesFrameworks": [".NET", "Winforms", "Syncfusion", "React", "pygame"],
+    "developmentTools": ["Visual Studio", "Jira", "Azure DevOps Server", "GitHub", "Microsoft SQL Server", "Laserfiche", "VS Code"]
+  },
+  "extracurricular": [
+    {
+      "activity": "CSSA Capture the Flag Competition",
+      "organization": "University Of Manitoba",
+      "date": "Sept. 2023",
+      "details": "Employed problem-solving abilities, research skills, and teamwork while focusing on stenographic and other cryptographic problems."
+    }
+  ]
+}
