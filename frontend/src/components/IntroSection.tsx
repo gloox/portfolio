@@ -1,14 +1,13 @@
-// src/components/IntroSection.tsx
 import React from 'react';
 import { Personal } from '@/types';
 import { Section } from "@/components/basic/Section";
 import { Text } from "@/components/basic/Text";
 import { Typewriter } from "@/components/basic/TypeWriterAnimation";
-import { ThemeGenerator } from "@/components/ThemeGenerator"; // Import it
+import { ThemeGenerator } from "@/components/ThemeGenerator";
 
 interface IntroSectionProps {
     personal: Personal;
-    onComplete: () => void; // <--- The function from PortfolioPage
+    onComplete: () => void;
 }
 
 const IntroSection: React.FC<IntroSectionProps> = ({ personal, onComplete }) => {
@@ -26,9 +25,6 @@ const IntroSection: React.FC<IntroSectionProps> = ({ personal, onComplete }) => 
                     />
                 </Text>
 
-                {/* Here is the logic:
-                   User types "Cyberpunk" -> Context updates CSS -> ThemeGenerator calls onComplete -> Page switches
-                */}
                 <ThemeGenerator onSuccess={onComplete} />
             </div>
         </Section>

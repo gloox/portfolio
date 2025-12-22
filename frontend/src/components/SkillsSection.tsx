@@ -2,7 +2,7 @@ import React from 'react';
 import { Skills, Extracurricular } from '@/types';
 import { Section } from './basic/Section';
 import { Text } from './basic/Text';
-import { Trophy, Wrench } from 'lucide-react';
+import {Code2, Trophy, Wrench} from 'lucide-react';
 
 interface SkillsSectionProps {
     skills: Skills;
@@ -15,9 +15,8 @@ export const SkillsSection = ({ skills, extracurricular }: SkillsSectionProps) =
     const formatKey = (key: string) => key.replace(/([A-Z])/g, ' $1').trim().replace(/^./, str => str.toUpperCase());
 
     return (
-        <Section className="py-20 px-6 max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12" id="skills">
+        <Section className="grid grid-cols-1 lg:grid-cols-2 gap-12" id="skills">
 
-            {/* COLUMN 1: SKILLS */}
             <div>
                 <div className="flex items-center gap-3 mb-8">
                     <Wrench className="w-8 h-8 text-[var(--ai-primary)]" />
@@ -27,17 +26,14 @@ export const SkillsSection = ({ skills, extracurricular }: SkillsSectionProps) =
                 <div className="space-y-8">
                     {Object.entries(skills).map(([category, items]) => (
                         <div key={category}>
-                            <h3 className="text-lg font-bold mb-3 text-[var(--ai-text)]/80">
+                            <Text variant={"h4"} className="mb-3 text-[var(--ai-text)]/80">
                                 {formatKey(category)}
-                            </h3>
+                            </Text>
                             <div className="flex flex-wrap gap-2">
                                 {(items as string[]).map((skill, i) => (
-                                    <span
-                                        key={i}
-                                        className="px-3 py-1.5 text-sm rounded-[var(--ai-radius)] bg-[var(--ai-surface)] border border-[length:var(--ai-border-width)] border-[var(--ai-text)]/20"
-                                    >
+                                    <Text variant={"h4"} className="px-3 py-1.5 text-sm rounded-[var(--ai-radius)] bg-[var(--ai-surface)] border border-[length:var(--ai-border-width)] border-[var(--ai-text)]/20">
                                         {skill}
-                                    </span>
+                                    </Text>
                                 ))}
                             </div>
                         </div>
@@ -45,7 +41,6 @@ export const SkillsSection = ({ skills, extracurricular }: SkillsSectionProps) =
                 </div>
             </div>
 
-            {/* COLUMN 2: EXTRACURRICULAR */}
             <div>
                 <div className="flex items-center gap-3 mb-8">
                     <Trophy className="w-8 h-8 text-[var(--ai-primary)]" />
@@ -53,28 +48,30 @@ export const SkillsSection = ({ skills, extracurricular }: SkillsSectionProps) =
                 </div>
 
                 <div className="space-y-6">
-                    {extracurricular.map((item, index) => (
+
+                    {extracurricular.map((event, index) => (
                         <div
                             key={index}
-                            className="p-6 rounded-[var(--ai-radius)] bg-[var(--ai-surface)]/50 border border-[length:var(--ai-border-width)] border-[var(--ai-primary)]/30"
+                            className="flex flex-col h-full p-6 rounded-[var(--ai-radius)] bg-[var(--ai-surface)] border border-[length:var(--ai-border-width)] border-[var(--ai-text)]/10 hover:border-[var(--ai-primary)]/50 transition-colors"
                         >
-                            <div className="flex justify-between items-start mb-2">
-                                <h3 className="font-bold text-lg text-[var(--ai-primary)]">
-                                    {item.activity}
-                                </h3>
-                                <span className="text-xs text-[var(--ai-text)]/60 whitespace-nowrap ml-4">
-                                    {item.date}
-                                </span>
+                            <div className="flex items-center gap-2 mb-2">
+                                <Code2 className="w-5 h-5 text-[var(--ai-primary)]" />
+                                <Text variant="h3" className="text-xl">
+                                    {event.activity}
+                                </Text>
                             </div>
-                            <p className="text-sm font-medium opacity-80 mb-2">{item.organization}</p>
-                            <p className="text-sm opacity-70 leading-relaxed">
-                                {item.details}
+
+                            <p className="text-sm text-[var(--ai-text)]/60 mb-4 italic">
+                                {event.date}
                             </p>
+
+                            <Text variant="p" className="flex-grow text-sm mb-6">
+                                {event.details}
+                            </Text>
                         </div>
                     ))}
                 </div>
             </div>
-
         </Section>
     );
 };

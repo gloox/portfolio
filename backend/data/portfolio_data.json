@@ -53,6 +53,33 @@
   ],
   "projects": [
     {
+      "activity": "TBC: Crabby Game: A 2D Platformer with a Crab-themed Theme",
+      "organization": "University Of Manitoba",
+      "date": "Nov. 2025",
+      "details": "Won audience choice and most potential (based on highest critic ratings on game quality and game mechanics) for the CSSA Game Jam 2025: Crabby Game."
+    },
+    {
+      "name": "TBC: WhirlyBird Clone",
+      "role": "Developer",
+      "dates": "2021, Jan. 2024",
+      "technologies": ["Python", "pygame"],
+      "description": "Created a local multiplayer chess application with an interactive Pygame interface."
+    },
+    {
+      "name": "TBC: Something similar to the yard website for dear hank and john or for all pods I listen to",
+      "role": "Developer",
+      "dates": "2021, Jan. 2024",
+      "technologies": ["Python", "pygame"],
+      "description": "Created a local multiplayer chess application with an interactive Pygame interface."
+    },
+    {
+      "name": "TBC: This Website",
+      "role": "Developer",
+      "dates": "2021, Jan. 2024",
+      "technologies": ["Python", "pygame"],
+      "description": "Created a local multiplayer chess application with an interactive Pygame interface."
+    },
+    {
       "name": "Grind Fuel Project Manager",
       "role": "Project Manager (Software Engineering Group Project)",
       "dates": "May 2025 – Current",
@@ -90,7 +117,7 @@
   ],
   "skills": {
     "languages": ["C#", "Java", "MySQL", "SQLite", "Python", "JavaScript", "HTML/CSS", "C", "C++"],
-    "librariesFrameworks": ["Vue 2/3", "React", ".NET", "Winforms", "Syncfusion", "pygame"],
+    "librariesFrameworks": ["Vue 2/3", "godot", "React", ".NET", "Winforms", "Syncfusion", "pygame"],
     "developmentTools": ["Podman","Visual Studio", "Jira", "Azure DevOps Server", "GitHub", "Microsoft SQL Server", "Laserfiche", "VS Code"]
   },
   "extracurricular": [

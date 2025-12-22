@@ -6,6 +6,8 @@ import { Text } from './basic/Text';
 import { Typewriter } from './basic/TypeWriterAnimation';
 import { Send } from 'lucide-react';
 import clsx from 'clsx';
+import {Section} from "@/components/basic/Section";
+import {Button} from "@/components/basic/Button";
 
 interface HomeHeaderProps {
     personal: Personal;
@@ -40,47 +42,39 @@ export const HomeSection: React.FC<HomeHeaderProps> = ({ personal, education}) =
     };
 
     return (
-        <section  id="home" className="min-h-[85vh] pt-20 px-4 sm:px-8 max-w-4xl mx-auto flex flex-col justify-center items-center text-center gap-10 font-[family-name:var(--ai-font)]">
-
-            {/* 1. Bio Section */}
+        <Section  id="home" className="pt-20 flex flex-col justify-center items-center text-center gap-10">
             <div className="space-y-6">
-                <Text variant="h1" className="text-5xl sm:text-6xl font-extrabold tracking-tight text-[var(--ai-text)]">
+                <Text variant="h1">
                     <Typewriter text={`Hi hi, I'm ${personal.firstName} ${personal.lastName}.`} delay={0.1} />
                 </Text>
-                <Text variant="h3" className="text-xl sm:text-2xl opacity-80 max-w-2xl mx-auto leading-relaxed text-[var(--ai-text)]">
-                    {/* Added Fallback for location here */}
+                <Text variant="h3" className="opacity-80 max-w-2xl">
                     {personal.title} from {education.institution} {personal.location}. <br/>
                 </Text>
             </div>
 
-            {/* 2. Big Q&A Section */}
-            <div className="w-full max-w-2xl mt-8 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            <div className="w-full max-w-2xl mt-8">
                 <div className="bg-[var(--ai-surface)]/50 backdrop-blur-md p-1 rounded-[var(--ai-radius)] shadow-xl border border-[var(--ai-text)]/10 ring-4 ring-[var(--ai-text)]/5">
                     <form onSubmit={handleChatSubmit} className="relative flex items-center">
                         <input
-                            className="w-full h-16 pl-6 pr-16 rounded-[calc(var(--ai-radius)-4px)] bg-transparent text-xl sm:text-2xl text-[var(--ai-text)] placeholder-[var(--ai-text)]/40 focus:outline-none font-[family-name:var(--ai-font)]"
+                            className="w-full h-16 pl-6 pr-16 bg-transparent text-xl placeholder-[var(--ai-text)]/40 focus:outline-none"
                             placeholder={`Ask anything about me!`}
                             value={question}
                             onChange={(e) => setQuestion(e.target.value)}
                             disabled={isChatting}
                         />
-                        <button
+                        <Button
                             type="submit"
                             disabled={isChatting}
                             className={clsx(
-                                "absolute right-2 p-3 text-white transition-transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed",
-                                "rounded-[var(--ai-radius)]",
-                                "bg-[var(--ai-primary)] hover:bg-[var(--ai-primary-hover)]"
+                                "absolute right-2 p-3 disabled:opacity-50"
                             )}
                         >
                             {isChatting ? (
                                 <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                             ) : (
-                                // FIX: Removed mix-blend-difference and force white (or background color)
-                                // This ensures it contrasts against the primary button color
                                 <Send className="w-6 h-6 text-[var(--ai-background)]" />
                             )}
-                        </button>
+                        </Button>
                     </form>
                 </div>
 
@@ -103,6 +97,6 @@ export const HomeSection: React.FC<HomeHeaderProps> = ({ personal, education}) =
                     </div>
                 )}
             </div>
-        </section>
+        </Section>
     );
 };

@@ -20,7 +20,6 @@ const API_URL = `${API_BASE_URL}/api/portfolio`;
 const PortfolioPage = () => {
   const [data, setData] = useState<PortfolioData | null>(null);
   const [loading, setLoading] = useState(true);
-
   const [stage, setStage] = useState<'intro' | 'transition' | 'home'>('intro');
 
   useEffect(() => {

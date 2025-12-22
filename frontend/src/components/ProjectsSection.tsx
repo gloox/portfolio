@@ -6,7 +6,7 @@ import { Code2 } from 'lucide-react';
 
 export const ProjectsSection = ({ projects }: { projects: Project[] }) => {
     return (
-        <Section className="py-20 px-6 max-w-6xl mx-auto" id="projects">
+        <Section id="projects">
             <div className="mb-12">
                 <Text variant="h2" className="text-[var(--ai-primary)] mb-2">
                     Projects
