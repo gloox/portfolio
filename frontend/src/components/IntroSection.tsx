@@ -13,7 +13,7 @@ interface IntroSectionProps {
 
 const IntroSection: React.FC<IntroSectionProps> = ({ personal, onComplete }) => {
     return (
-        <Section className="min-h-screen flex flex-col justify-center px-20" id="home">
+        <Section className="min-h-screen flex flex-col justify-center px-20 max-w-full" id="home">
             <div className="w-full max-w-3xl">
                 <Text variant="h1">
                     <Typewriter text={`Hi, this is ${personal.firstName}'s portfolioLM`} />

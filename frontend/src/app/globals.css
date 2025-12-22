@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
 :root {
-  /* Defaults matching your "defaultTheme" in Context */
   --ai-background: #ffffff;
   --ai-text: #000000;
   --ai-surface: #f3f4f6;
@@ -11,7 +10,7 @@
   --ai-secondary-hover: #374151;
   --ai-radius: 0.5rem;
   --ai-border-width: 1px;
-  --font-current: var(--font-sans); /* Default font */
+  --font-current: var(--font-sans);
 }
 
 @media (prefers-color-scheme: dark) {

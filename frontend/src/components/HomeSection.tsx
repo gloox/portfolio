@@ -12,7 +12,7 @@ interface HomeHeaderProps {
     education: Education;
 }
 
-export const HomeHeader: React.FC<HomeHeaderProps> = ({ personal, education}) => {
+export const HomeSection: React.FC<HomeHeaderProps> = ({ personal, education}) => {
     const [question, setQuestion] = useState("");
     const [chatReply, setChatReply] = useState("");
     const [isChatting, setIsChatting] = useState(false);
@@ -45,7 +45,7 @@ export const HomeHeader: React.FC<HomeHeaderProps> = ({ personal, education}) =>
             {/* 1. Bio Section */}
             <div className="space-y-6">
                 <Text variant="h1" className="text-5xl sm:text-6xl font-extrabold tracking-tight text-[var(--ai-text)]">
-                    <Typewriter text={`Hi hi, I'm ${personal.firstName}.`} delay={0.1} />
+                    <Typewriter text={`Hi hi, I'm ${personal.firstName} ${personal.lastName}.`} delay={0.1} />
                 </Text>
                 <Text variant="h3" className="text-xl sm:text-2xl opacity-80 max-w-2xl mx-auto leading-relaxed text-[var(--ai-text)]">
                     {/* Added Fallback for location here */}

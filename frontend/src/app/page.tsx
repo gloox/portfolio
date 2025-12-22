@@ -3,7 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import { PortfolioData } from '@/types';
 import IntroSection from '@/components/IntroSection';
-import { HomeHeader } from '@/components/HomeHeader';
+import { HomeSection } from '@/components/HomeSection';
 import { Text } from '@/components/basic/Text';
 import { Typewriter } from '@/components/basic/TypeWriterAnimation';
 import { Button } from '@/components/basic/Button';
@@ -12,8 +12,8 @@ import { ProjectsSection } from '@/components/ProjectsSection';
 import { SkillsSection } from '@/components/SkillsSection';
 import {EducationSection} from "@/components/EducationSection";
 import PopIn from "@/components/basic/PopIn";
+import {Section} from "@/components/basic/Section";
 
-// NOTE: Ensure your .env.local file has this defined
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 const API_URL = `${API_BASE_URL}/api/portfolio`;
 
@@ -21,16 +21,16 @@ const PortfolioPage = () => {
   const [data, setData] = useState<PortfolioData | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // Stages: 'intro' | 'transition' | 'home'
   const [stage, setStage] = useState<'intro' | 'transition' | 'home'>('intro');
 
-  // 1. Load Data & Check "Cookie" on Mount
   useEffect(() => {
     const init = async () => {
-      // Check if user has already visited
       const hasVisited = localStorage.getItem('portfolio_intro_completed');
       if (hasVisited) {
         setStage('home');
+      }
+      else{
+        setLoading(false);
       }
 
       // Fetch Data
@@ -40,7 +40,6 @@ const PortfolioPage = () => {
         setData(result);
       } catch (error) {
         console.error("Error fetching data", error);
-        // Add fallback data handling here if needed
       } finally {
         setLoading(false);
       }
@@ -48,13 +47,10 @@ const PortfolioPage = () => {
     init();
   }, []);
 
-  // 2. Callback when Intro is "Done" (Theme selected)
   const handleIntroComplete = () => {
-    // Move to transition stage (The fun text)
     setStage('transition');
   };
 
-  // 3. Callback to finish Transition and go Home
   const finishTransition = () => {
     localStorage.setItem('portfolio_intro_completed', 'true');
     setStage('home');
@@ -62,20 +58,24 @@ const PortfolioPage = () => {
 
   if (loading || !data) return <div className="p-20 text-center">Loading...</div>;
 
-  // --- VIEW 1: INTRO ---
   if (stage === 'intro') {
     return (
         <IntroSection
             personal={data.personal}
-            onComplete={handleIntroComplete} // Pass this down to IntroSection
+            onComplete={handleIntroComplete}
         />
     );
   }
 
-  // --- VIEW 2: TRANSITION TEXT ---
   if (stage === 'transition') {
     return (
-        <section className="min-h-screen flex flex-col justify-center items-center px-10 max-w-4xl mx-auto space-y-8 animate-in fade-in duration-1000">
+        <div
+            className={`
+            bg-[var(--ai-background)]
+            transition-colors duration-500
+        `}
+        >
+        <Section className="min-h-screen flex flex-col justify-center items-center px-10 max-w-4xl mx-auto space-y-8 animate-in fade-in duration-1000">
           <div className="space-y-6">
             <Text variant="h2">
               <Typewriter
@@ -104,31 +104,21 @@ const PortfolioPage = () => {
             </Button>
           </PopIn>
 
-        </section>
+        </Section>
+        </div>
     );
   }
 
-  // --- VIEW 3: HOME ---
   return (
       <div
-
           className={`
-            /* 1. APPLY THE BACKGROUND & TEXT COLORS HERE */
-            bg-[var(--ai-background)] 
-            text-[var(--ai-text)]
-            
-            /* 2. ENSURE IT COVERS THE FULL SCREEN */
-            min-h-screen
-            
-            /* 3. SMOOTH TRANSITION */
+            bg-[var(--ai-background)]
             transition-colors duration-500
         `}
       >
-        <HomeHeader personal={data.personal} education={data.education}/>
+        <HomeSection personal={data.personal} education={data.education}/>
 
-        {/* Pass data to the new sections */}
-        {data.education && <EducationSection education={data.education} />}
-
+        <EducationSection education={data.education} />
         <ExperienceSection experiences={data.experience} />
         <ProjectsSection projects={data.projects} />
         <SkillsSection

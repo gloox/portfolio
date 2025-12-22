@@ -10,8 +10,8 @@ export const Section = ({children, className, ...props }: SectionProps) => {
     return (
         <section
             className={cn(
-                "min-h-[80vh] w-full transition-colors duration-500",
-                "bg-[var(--ai-background)]", // <--- THE KEY CHANGE
+                "py-20 px-6 max-w-5xl mx-auto min-h-[80vh] transition-colors duration-500",
+                "bg-[var(--ai-background)]",
                 className
             )}
             {...props}

@@ -35,7 +35,7 @@ export const ThemeGenerator: React.FC<ThemeGeneratorProps> = ({ onSuccess }) => 
                     type="text"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
-                    placeholder="Describe a vibe (e.g. 'Coffee')..."
+                    placeholder="(e.g. 'Coffee', 'Valorant', 'Old School')..."
                     disabled={isGenerating}
                     className="flex-1 px-4 py-3 rounded-[var(--ai-radius)] border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--ai-primary)] text-black"
                 />
