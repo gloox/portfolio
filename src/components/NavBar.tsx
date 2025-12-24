@@ -16,7 +16,7 @@ import { useTheme } from "@/context/ThemeContext";
 
 const navItems = [
   { name: "Home", href: "#home", icon: Home },
-  { name: "Education", href: "#education", icon: GraduationCap }, // <--- ADDED
+  { name: "Education", href: "#education", icon: GraduationCap },
   { name: "Experience", href: "#experience", icon: Briefcase },
   { name: "Projects", href: "#projects", icon: Code },
   { name: "Skills", href: "#skills", icon: Sparkles },
@@ -46,7 +46,7 @@ const NavBar = () => {
 
   return (
     <nav className={navClasses}>
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex justify-between items-center w-full">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex justify-center items-center w-full">
         {/* Logo / Brand Area (Empty for now but preserves layout) */}
         <div className="flex-shrink-0 font-[family-name:var(--ai-font)] font-bold text-[var(--ai-text)]"></div>
 

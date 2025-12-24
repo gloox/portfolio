@@ -5,6 +5,7 @@ import { Palette, Sparkles } from "lucide-react";
 import { useTheme } from "@/context/ThemeContext";
 import { Button } from "./basic/Button";
 import clsx from "clsx";
+import { ChevronDown } from "lucide-react";
 
 export const StyleDropdown = () => {
   const { generateTheme, isGenerating } = useTheme();
@@ -45,14 +46,16 @@ export const StyleDropdown = () => {
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={clsx(
-          "flex items-center space-x-2 font-medium transition duration-150 p-2 rounded-[var(--ai-radius)]",
+          "ms-8 flex items-center space-x-2 font-medium transition duration-150 p-2 rounded-[var(--ai-radius)]",
           // Text Colors using AI Variables
           "text-[var(--ai-text)]/70 hover:text-[var(--ai-primary)] hover:bg-[var(--ai-primary)]/10",
           isOpen && "bg-[var(--ai-primary)]/10 text-[var(--ai-primary)]",
         )}
+        style={{outline: 'solid'}}
       >
         <Palette className="w-5 h-5" />
-        <span>Styles</span>
+        <span>Style</span>
+        <ChevronDown className="w-5 h-5" />
       </button>
 
       {/* The Dropdown Panel */}
