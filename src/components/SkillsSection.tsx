@@ -18,9 +18,11 @@ export const SkillsSection = ({ skills, extracurricular }: SkillsSectionProps) =
         <Section className="grid grid-cols-1 lg:grid-cols-2 gap-12" id="skills">
 
             <div>
-                <div className="flex items-center gap-3 mb-8">
-                    <Wrench className="w-8 h-8 text-[var(--ai-primary)]" />
-                    <Text variant="h2">Technical Skills</Text>
+                <div className="mb-12">
+                    <Text variant="h2" className="text-[var(--ai-primary)] mb-2">
+                        Technical Skills
+                    </Text>
+                    <div className="h-1 w-20 bg-[var(--ai-text)]/20 rounded-full" />
                 </div>
 
                 <div className="space-y-8">
@@ -42,9 +44,11 @@ export const SkillsSection = ({ skills, extracurricular }: SkillsSectionProps) =
             </div>
 
             <div>
-                <div className="flex items-center gap-3 mb-8">
-                    <Trophy className="w-8 h-8 text-[var(--ai-primary)]" />
-                    <Text variant="h2">Extracurriculars</Text>
+                <div className="mb-12">
+                    <Text variant="h2" className="text-[var(--ai-primary)] mb-2">
+                        Extracurriculars
+                    </Text>
+                    <div className="h-1 w-20 bg-[var(--ai-text)]/20 rounded-full" />
                 </div>
 
                 <div className="space-y-6">
