@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import NavBar from "@/components/NavBar";
 import { ThemeProvider } from "@/context/ThemeContext";
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata: Metadata = {
     title: "Geet's PortfolioLM",
@@ -20,6 +21,7 @@ export default function RootLayout({ children,}: Readonly<{
                         {children}
                     </main>
                 </ThemeProvider>
+                <Analytics />
             </body>
         </html>
     );
