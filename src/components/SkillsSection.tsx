@@ -31,7 +31,7 @@ export const SkillsSection = ({ skills, extracurricular }: SkillsSectionProps) =
                             </Text>
                             <div className="flex flex-wrap gap-2">
                                 {(items as string[]).map((skill, i) => (
-                                    <Text variant={"h4"} className="px-3 py-1.5 text-sm rounded-[var(--ai-radius)] bg-[var(--ai-surface)] border border-[length:var(--ai-border-width)] border-[var(--ai-text)]/20">
+                                    <Text key={"text-"+skill} variant={"h4"} className="px-3 py-1.5 text-sm rounded-[var(--ai-radius)] bg-[var(--ai-surface)] border border-[length:var(--ai-border-width)] border-[var(--ai-text)]/20">
                                         {skill}
                                     </Text>
                                 ))}

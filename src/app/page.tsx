@@ -34,7 +34,7 @@ const PortfolioPage = () => {
 
       // Fetch Data
       try {
-        const response = await fetch(API_URL);
+        const response = await fetch('/api/portfolio');
         const result: PortfolioData = await response.json();
         setData(result);
       } catch (error) {

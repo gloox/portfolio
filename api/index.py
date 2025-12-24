@@ -115,4 +115,4 @@ async def chat_about_me(request: ChatRequest):
         return {"reply": "Sorry, an error occurred. Please try again later."}
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
+    uvicorn.run("index:app", host="0.0.0.0", port=8000, reload=True)

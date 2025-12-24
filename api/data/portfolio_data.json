@@ -56,6 +56,7 @@
       "activity": "TBC: Crabby Game: A 2D Platformer with a Crab-themed Theme",
       "organization": "University Of Manitoba",
       "date": "Nov. 2025",
+      "technologies": ["Python", "pygame"],
       "details": "Won audience choice and most potential (based on highest critic ratings on game quality and game mechanics) for the CSSA Game Jam 2025: Crabby Game."
     },
     {

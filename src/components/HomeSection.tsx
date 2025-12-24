@@ -27,7 +27,7 @@ export const HomeSection: React.FC<HomeHeaderProps> = ({ personal, education}) =
         setChatReply("");
 
         try {
-            const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/api/chat`, {
+            const res = await fetch(`/api/chat`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ message: question })
