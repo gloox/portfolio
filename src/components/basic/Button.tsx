@@ -7,48 +7,58 @@ import { useTheme } from "@/context/ThemeContext";
 type ButtonVariant = "primary" | "secondary";
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> &
-    AnchorHTMLAttributes<HTMLAnchorElement> & {
+  AnchorHTMLAttributes<HTMLAnchorElement> & {
     href?: string;
     variant?: ButtonVariant;
-};
+  };
 
 export const Button = ({
-                           children,
-                           className,
-                           href,
-                           variant = "primary",
-                           ...props
-                       }: ButtonProps) => {
-    // We don't need to read the theme here if we use CSS vars,
-    // but we keep the hook if you need logic later.
-    useTheme();
+  children,
+  className,
+  href,
+  variant = "primary",
+  ...props
+}: ButtonProps) => {
+  // We don't need to read the theme here if we use CSS vars,
+  // but we keep the hook if you need logic later.
+  useTheme();
 
-    // 1. Use Arbitrary Values (Square brackets)
-// Inside Button.tsx
-// Update baseStyles:
-    const baseStyles = "inline-flex items-center justify-center px-6 py-3 font-semibold shadow-lg transition transform hover:scale-105 active:scale-95 rounded-[var(--ai-radius)] border-[length:var(--ai-border-width)] font-[family-name:var(--ai-font)]";
+  // 1. Use Arbitrary Values (Square brackets)
+  // Inside Button.tsx
+  // Update baseStyles:
+  const baseStyles =
+    "inline-flex items-center justify-center px-6 py-3 font-semibold shadow-lg transition transform hover:scale-105 active:scale-95 rounded-[var(--ai-radius)] border-[length:var(--ai-border-width)] font-[family-name:var(--ai-font)]";
 
-// Update variants to include border colors
-    const variants = {
-        primary: "bg-[var(--ai-primary)] hover:bg-[var(--ai-primary-hover)] text-[var(--ai-text)] border-transparent",
+  // Update variants to include border colors
+  const variants = {
+    primary:
+      "bg-[var(--ai-primary)] hover:bg-[var(--ai-primary-hover)] text-[var(--ai-text)] border-transparent",
 
-        // Secondary often looks good as an 'outline' style in some themes
-        secondary: "bg-[var(--ai-secondary)] hover:bg-[var(--ai-secondary-hover)] text-white border-transparent",
-    };
+    // Secondary often looks good as an 'outline' style in some themes
+    secondary:
+      "bg-[var(--ai-secondary)] hover:bg-[var(--ai-secondary-hover)] text-white border-transparent",
+  };
 
-    const combinedStyles = cn(baseStyles, variants[variant], className);
+  const combinedStyles = cn(baseStyles, variants[variant], className);
 
-    if (href) {
-        return (
-            <a href={href} className={combinedStyles} {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}>
-                {children}
-            </a>
-        );
-    }
-
+  if (href) {
     return (
-        <button className={combinedStyles} {...(props as ButtonHTMLAttributes<HTMLButtonElement>)}>
-            {children}
-        </button>
+      <a
+        href={href}
+        className={combinedStyles}
+        {...(props as AnchorHTMLAttributes<HTMLAnchorElement>)}
+      >
+        {children}
+      </a>
     );
+  }
+
+  return (
+    <button
+      className={combinedStyles}
+      {...(props as ButtonHTMLAttributes<HTMLButtonElement>)}
+    >
+      {children}
+    </button>
+  );
 };

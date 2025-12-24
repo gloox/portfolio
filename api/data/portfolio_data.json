@@ -117,9 +117,36 @@
     }
   ],
   "skills": {
-    "languages": ["C#", "Java", "MySQL", "SQLite", "Python", "JavaScript", "HTML/CSS", "C", "C++"],
-    "librariesFrameworks": ["Vue 2/3", "godot", "React", ".NET", "Winforms", "Syncfusion", "pygame"],
-    "developmentTools": ["Podman","Visual Studio", "Jira", "Azure DevOps Server", "GitHub", "Microsoft SQL Server", "Laserfiche", "VS Code"]
+    "languages": [
+      "C#",
+      "Java",
+      "MySQL",
+      "SQLite",
+      "Python",
+      "JavaScript",
+      "HTML/CSS",
+      "C",
+      "C++"
+    ],
+    "librariesFrameworks": [
+      "Vue 2/3",
+      "godot",
+      "React",
+      ".NET",
+      "Winforms",
+      "Syncfusion",
+      "pygame"
+    ],
+    "developmentTools": [
+      "Podman",
+      "Visual Studio",
+      "Jira",
+      "Azure DevOps Server",
+      "GitHub",
+      "Microsoft SQL Server",
+      "Laserfiche",
+      "VS Code"
+    ]
   },
   "extracurricular": [
     {
