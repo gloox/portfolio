@@ -62,7 +62,7 @@ const PortfolioPage = () => {
 
   if (stage === "intro") {
     return (
-      <IntroSection personal={data.personal} onComplete={handleIntroComplete} />
+      <IntroSection onComplete={handleIntroComplete} />
     );
   }
 
