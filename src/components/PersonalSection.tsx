@@ -2,6 +2,7 @@ import React from "react";
 import { Section } from "./basic/Section";
 import { Text } from "./basic/Text";
 import { Book, Heart } from "lucide-react";
+import {SectionTitle} from "@/components/basic/SectionTitle";
 
 interface PersonalSectionProps {
   interests: {
@@ -13,12 +14,7 @@ interface PersonalSectionProps {
 export const PersonalSection = ({ interests }: PersonalSectionProps) => {
   return (
     <Section id="personal" className="py-12">
-      <div className="mb-12">
-        <Text variant="h2" className="text-[var(--ai-primary)] mb-2">
-          Things I like
-        </Text>
-        <div className="h-1 w-20 bg-[var(--ai-text)]/20 rounded-full" />
-      </div>
+      <SectionTitle>Things I like</SectionTitle>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Books */}

@@ -3,6 +3,7 @@ import { Skills, Extracurricular } from "@/types";
 import { Section } from "./basic/Section";
 import { Text } from "./basic/Text";
 import { Code2, Trophy, Wrench } from "lucide-react";
+import {SectionTitle} from "@/components/basic/SectionTitle";
 
 interface SkillsSectionProps {
   skills: Skills;
@@ -23,12 +24,7 @@ export const SkillsSection = ({
   return (
     <Section className="grid grid-cols-1 lg:grid-cols-2 gap-12" id="skills">
       <div>
-        <div className="mb-12">
-          <Text variant="h2" className="text-[var(--ai-primary)] mb-2">
-            Technical Skills
-          </Text>
-          <div className="h-1 w-20 bg-[var(--ai-text)]/20 rounded-full" />
-        </div>
+        <SectionTitle>Skills</SectionTitle>
 
         <div className="space-y-8">
           {Object.entries(skills).map(([category, items]) => (
@@ -53,12 +49,7 @@ export const SkillsSection = ({
       </div>
 
       <div>
-        <div className="mb-12">
-          <Text variant="h2" className="text-[var(--ai-primary)] mb-2">
-            Extracurriculars
-          </Text>
-          <div className="h-1 w-20 bg-[var(--ai-text)]/20 rounded-full" />
-        </div>
+        <SectionTitle>Extracurriculars</SectionTitle>
 
         <div className="space-y-6">
           {extracurricular.map((event, index) => (

@@ -1,7 +1,8 @@
 import React from "react";
 import { Section } from "./basic/Section";
 import { Text } from "./basic/Text";
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Mail} from "lucide-react";
+import { SiLinkedin, SiGithub } from "react-icons/si";
 import { Button } from "./basic/Button";
 
 interface AboutSectionProps {
@@ -30,20 +31,18 @@ export const AboutSection = ({ personal }: AboutSectionProps) => {
             </Button>
           </a>
           <div className="flex gap-4">
-            <a 
-              href={personal.linkedin} 
-              target="_blank" 
-              className="p-3 rounded-[var(--ai-radius)] bg-[var(--ai-surface)] border border-[var(--ai-text)]/10 hover:text-[var(--ai-primary)] transition-colors"
+            <Button
+              href={personal.linkedin}
+              target="_blank"
             >
-              <Linkedin className="w-6 h-6" />
-            </a>
-            <a 
+              <SiLinkedin className="w-6 h-6" />
+            </Button>
+            <Button
               href={personal.github} 
               target="_blank" 
-              className="p-3 rounded-[var(--ai-radius)] bg-[var(--ai-surface)] border border-[var(--ai-text)]/10 hover:text-[var(--ai-primary)] transition-colors"
             >
-              <Github className="w-6 h-6" />
-            </a>
+              <SiGithub className="w-6 h-6" />
+            </Button>
           </div>
         </div>
       </div>

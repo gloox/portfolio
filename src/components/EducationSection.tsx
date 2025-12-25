@@ -3,16 +3,12 @@ import { Education } from "@/types";
 import { Section } from "./basic/Section";
 import { Text } from "./basic/Text";
 import { GraduationCap, Award } from "lucide-react";
+import {SectionTitle} from "@/components/basic/SectionTitle";
 
 export const EducationSection = ({ education }: { education: Education[] }) => {
   return (
     <Section id="education">
-      <div className="mb-12">
-        <Text variant="h2" className="text-[var(--ai-primary)] mb-2">
-          Education
-        </Text>
-        <div className="h-1 w-20 bg-[var(--ai-text)]/20 rounded-full" />
-      </div>
+        <SectionTitle>Education</SectionTitle>
 
       <div className="space-y-8">
         {education.map((edu, index) => (

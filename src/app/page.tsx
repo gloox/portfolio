@@ -114,15 +114,17 @@ const PortfolioPage = () => {
             transition-colors duration-500
         `}
       >
+
+        <ExperienceSection experiences={data.experience} />
+        <EducationSection education={data.education} />
+
         <HomeSection personal={data.personal} education={data.education} />
         <ProjectsSection projects={data.projects} />
         <PersonalSection interests={data.personal.interests} />
-        <ExperienceSection experiences={data.experience} />
         <SkillsSection
             skills={data.skills}
             extracurricular={data.extracurricular}
         />
-        <EducationSection education={data.education} />
         <AboutSection personal={data.personal} />
       </div>
     </>

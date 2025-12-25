@@ -3,16 +3,12 @@ import { Project } from "@/types";
 import { Section } from "./basic/Section";
 import { Text } from "./basic/Text";
 import { Code2 } from "lucide-react";
+import {SectionTitle} from "@/components/basic/SectionTitle";
 
 export const ProjectsSection = ({ projects }: { projects: Project[] }) => {
   return (
     <Section id="projects">
-      <div className="mb-12">
-        <Text variant="h2" className="text-[var(--ai-primary)] mb-2">
-          Projects
-        </Text>
-        <div className="h-1 w-20 bg-[var(--ai-text)]/20 rounded-full" />
-      </div>
+<SectionTitle>Projects</SectionTitle>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project, index) => (

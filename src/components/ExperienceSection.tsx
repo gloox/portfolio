@@ -3,6 +3,7 @@ import { Experience } from "@/types";
 import { Section } from "./basic/Section";
 import { Text } from "./basic/Text";
 import { Calendar, MapPin } from "lucide-react";
+import {SectionTitle} from "@/components/basic/SectionTitle";
 
 export const ExperienceSection = ({
   experiences,
@@ -11,18 +12,13 @@ export const ExperienceSection = ({
 }) => {
   return (
     <Section id="experience">
-      <div className="mb-12">
-        <Text variant="h2" className="text-[var(--ai-primary)] mb-2">
-          Experience
-        </Text>
-        <div className="h-1 w-20 bg-[var(--ai-text)]/20 rounded-full" />
-      </div>
+        <SectionTitle>Experience</SectionTitle>
 
       <div className="space-y-8">
         {experiences.map((job, index) => (
           <div
             key={index}
-            className="p-8 rounded-[var(--ai-radius)] bg-[var(--ai-surface)] border border-[var(--ai-primary)]/20 transition-transform hover:-translate-y-1 shadow-sm"
+            className="p-8 rounded-[var(--ai-radius)] bg-[var(--ai-surface)] border border-[var(--ai-primary)]/20 transition-transform hover:border-[var(--ai-primary)]/50  hover:-translate-y-1 shadow-sm"
           >
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
               <div>
