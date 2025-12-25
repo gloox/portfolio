@@ -3,6 +3,7 @@ import { Section } from "./basic/Section";
 import { Text } from "./basic/Text";
 import { Book, Heart } from "lucide-react";
 import {SectionTitle} from "@/components/basic/SectionTitle";
+import {Card} from "@/components/basic/Card";
 
 interface PersonalSectionProps {
   interests: {
@@ -18,7 +19,7 @@ export const PersonalSection = ({ interests }: PersonalSectionProps) => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Books */}
-        <div className="p-6 rounded-[var(--ai-radius)] bg-[var(--ai-surface)] border border-[var(--ai-text)]/10">
+        <Card>
           <div className="flex items-center gap-2 mb-4">
             <Book className="w-5 h-5 text-[var(--ai-primary)]" />
             <Text variant="h3">Books I Love</Text>
@@ -31,10 +32,10 @@ export const PersonalSection = ({ interests }: PersonalSectionProps) => {
               </li>
             ))}
           </ul>
-        </div>
+        </Card>
 
         {/* Hobbies */}
-        <div className="p-6 rounded-[var(--ai-radius)] bg-[var(--ai-surface)] border border-[var(--ai-text)]/10">
+        <Card>
           <div className="flex items-center gap-2 mb-4">
             <Heart className="w-5 h-5 text-[var(--ai-primary)]" />
             <Text variant="h3">Hobbies & Interests</Text>
@@ -49,7 +50,7 @@ export const PersonalSection = ({ interests }: PersonalSectionProps) => {
               </span>
             ))}
           </div>
-        </div>
+        </Card>
       </div>
     </Section>
   );

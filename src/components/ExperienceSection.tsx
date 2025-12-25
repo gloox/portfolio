@@ -4,6 +4,7 @@ import { Section } from "./basic/Section";
 import { Text } from "./basic/Text";
 import { Calendar, MapPin } from "lucide-react";
 import {SectionTitle} from "@/components/basic/SectionTitle";
+import {Card} from "@/components/basic/Card";
 
 export const ExperienceSection = ({
   experiences,
@@ -16,9 +17,9 @@ export const ExperienceSection = ({
 
       <div className="space-y-8">
         {experiences.map((job, index) => (
-          <div
+          <Card
+              className="bg-[var(--ai-background)]"
             key={index}
-            className="p-8 rounded-[var(--ai-radius)] bg-[var(--ai-surface)] border border-[var(--ai-primary)]/20 transition-transform hover:border-[var(--ai-primary)]/50  hover:-translate-y-1 shadow-sm"
           >
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
               <div>
@@ -62,7 +63,7 @@ export const ExperienceSection = ({
                   ),
               )}
             </ul>
-          </div>
+          </Card>
         ))}
       </div>
     </Section>

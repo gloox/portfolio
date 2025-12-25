@@ -4,6 +4,7 @@ import { Section } from "./basic/Section";
 import { Text } from "./basic/Text";
 import { GraduationCap, Award } from "lucide-react";
 import {SectionTitle} from "@/components/basic/SectionTitle";
+import {Card} from "@/components/basic/Card";
 
 export const EducationSection = ({ education }: { education: Education[] }) => {
   return (
@@ -12,9 +13,9 @@ export const EducationSection = ({ education }: { education: Education[] }) => {
 
       <div className="space-y-8">
         {education.map((edu, index) => (
-          <div
-            key={index}
-            className="p-8 rounded-[var(--ai-radius)] bg-[var(--ai-surface)] border border-[length:var(--ai-border-width)] border-[var(--ai-primary)]/20 shadow-sm"
+          <Card
+              className="bg-[var(--ai-background)]"
+              key={index}
           >
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
               <div>
@@ -61,7 +62,7 @@ export const EducationSection = ({ education }: { education: Education[] }) => {
                 ))}
               </ul>
             </div>
-          </div>
+          </Card>
         ))}
       </div>
     </Section>

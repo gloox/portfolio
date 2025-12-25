@@ -4,6 +4,7 @@ import { Section } from "./basic/Section";
 import { Text } from "./basic/Text";
 import { Code2 } from "lucide-react";
 import {SectionTitle} from "@/components/basic/SectionTitle";
+import {Card} from "@/components/basic/Card";
 
 export const ProjectsSection = ({ projects }: { projects: Project[] }) => {
   return (
@@ -12,9 +13,9 @@ export const ProjectsSection = ({ projects }: { projects: Project[] }) => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {projects.map((project, index) => (
-          <div
+          <Card
             key={index}
-            className="flex flex-col h-full p-6 rounded-[var(--ai-radius)] bg-[var(--ai-surface)] border border-[length:var(--ai-border-width)] border-[var(--ai-text)]/10 hover:border-[var(--ai-primary)]/50 transition-colors"
+            className="p-6"
           >
             <div className="flex items-center gap-2 mb-2">
               <Code2 className="w-5 h-5 text-[var(--ai-primary)]" />
@@ -41,7 +42,7 @@ export const ProjectsSection = ({ projects }: { projects: Project[] }) => {
                 </span>
               ))}
             </div>
-          </div>
+          </Card>
         ))}
       </div>
     </Section>
