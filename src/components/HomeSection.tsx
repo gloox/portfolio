@@ -69,7 +69,7 @@ export const HomeSection: React.FC<HomeHeaderProps> = ({
             className="relative flex items-center"
           >
             <input
-              className="w-full h-16 pl-6 pr-16 bg-transparent text-xl placeholder-[var(--ai-text)]/40 focus:outline-none"
+              className="w-full h-16 pl-6 pr-16 rounded-[calc(var(--ai-radius)-4px)] bg-transparent text-xl sm:text-2xl text-[var(--ai-text)] placeholder-[var(--ai-text)]/40 focus:outline-none font-[family-name:var(--ai-font)]"
               placeholder={`Ask anything about me!`}
               value={question}
               onChange={(e) => setQuestion(e.target.value)}

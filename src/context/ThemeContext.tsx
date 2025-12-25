@@ -30,19 +30,18 @@ interface ThemeContextType {
 // Default fallback (White/Clean)
 const defaultTheme: ThemeConfig = {
   colors: {
-    primary: "#4F46E5",
-    primaryHover: "#4338ca",
-    secondary: "#4B5563",
-    secondaryHover: "#374151",
-    background: "#ffffff",
-    text: "#000000",
-    surface: "#f3f4f6",
+    primary: "#9370DB",
+    primaryHover: "#A982E8",
+    secondary: "#E6E6FA",
+    secondaryHover: "#F0F0FF",
+    background: "#F5EEF8",
+    text: "#333333",
+    surface: "#FFFFFF",
   },
-  borderRadius: "0.5rem",
+  borderRadius: "0.75rem",
   borderWidth: "1px",
   fontStyle: "sans",
 };
-
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
 const STORAGE_KEY = "portfolio_theme_cache";

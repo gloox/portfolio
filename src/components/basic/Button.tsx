@@ -32,11 +32,11 @@ export const Button = ({
   // Update variants to include border colors
   const variants = {
     primary:
-      "bg-[var(--ai-primary)] hover:bg-[var(--ai-primary-hover)] text-[var(--ai-text)] border-transparent",
+      "bg-[var(--ai-primary)] hover:bg-[var(--ai-primary-hover)] text-[var(--ai-background)] border-transparent",
 
     // Secondary often looks good as an 'outline' style in some themes
     secondary:
-      "bg-[var(--ai-secondary)] hover:bg-[var(--ai-secondary-hover)] text-white border-transparent",
+      "bg-[var(--ai-secondary)] hover:bg-[var(--ai-secondary-hover)] text-[var(--ai-background)] border-transparent",
   };
 
   const combinedStyles = cn(baseStyles, variants[variant], className);

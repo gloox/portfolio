@@ -51,7 +51,7 @@ export const StyleDropdown = () => {
           "text-[var(--ai-text)]/70 hover:text-[var(--ai-primary)] hover:bg-[var(--ai-primary)]/10",
           isOpen && "bg-[var(--ai-primary)]/10 text-[var(--ai-primary)]",
         )}
-        style={{outline: 'solid'}}
+        style={{ outline: "solid" }}
       >
         <Palette className="w-5 h-5" />
         <span>Style</span>
