@@ -6,7 +6,13 @@
     "email": "loombag@myumanitoba.ca",
     "welcome-text": "Hi, refresh the website and see something cool happen!",
     "location": "Winnipeg",
-    "summary": "Highly motivated Computer Science student with a strong academic record and practical experience in full-stack development, database design, and workflow automation. Proven ability to independently manage the full software development lifecycle, leading to significant improvements in user efficiency."
+    "summary": "Highly motivated Computer Science student with a strong academic record and practical experience in full-stack development, database design, and workflow automation. Proven ability to independently manage the full software development lifecycle, leading to significant improvements in user efficiency.",
+    "linkedin": "https://www.linkedin.com/in/geet-loomba-a197bb2a1/",
+    "github": "https://github.com/gloox",
+    "interests": {
+      "books": ["Slaughter House 5", "The Count of Monte Cristo", "The Anthropocene Reviewed", "The Bluest Eye"],
+      "hobbies": ["Weightlifting", "Tech", "Anime", "Fashion History", "Podcasts"]
+    }
   },
   "education": [
     {

@@ -16,10 +16,12 @@ import { useTheme } from "@/context/ThemeContext";
 
 const navItems = [
   { name: "Home", href: "#home", icon: Home },
+  { name: "Personal", href: "#personal", icon: Sparkles },
   { name: "Education", href: "#education", icon: GraduationCap },
   { name: "Experience", href: "#experience", icon: Briefcase },
   { name: "Projects", href: "#projects", icon: Code },
   { name: "Skills", href: "#skills", icon: Sparkles },
+  { name: "Contact", href: "#about", icon: Briefcase },
 ];
 
 const NavBar = () => {

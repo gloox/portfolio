@@ -14,6 +14,8 @@ import { EducationSection } from "@/components/EducationSection";
 import PopIn from "@/components/basic/PopIn";
 import { Section } from "@/components/basic/Section";
 import NavBar from "@/components/NavBar";
+import { PersonalSection } from "@/components/PersonalSection";
+import { AboutSection } from "@/components/AboutSection";
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 const API_URL = `${API_BASE_URL}/api/portfolio`;
@@ -113,6 +115,7 @@ const PortfolioPage = () => {
         `}
       >
         <HomeSection personal={data.personal} education={data.education} />
+        <PersonalSection interests={data.personal.interests} />
 
         <EducationSection education={data.education} />
         <ExperienceSection experiences={data.experience} />
@@ -121,6 +124,7 @@ const PortfolioPage = () => {
           skills={data.skills}
           extracurricular={data.extracurricular}
         />
+        <AboutSection personal={data.personal} />
       </div>
     </>
   );
