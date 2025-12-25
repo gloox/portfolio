@@ -63,13 +63,13 @@ export const HomeSection: React.FC<HomeHeaderProps> = ({
       </div>
 
       <div className="w-full max-w-2xl mt-8">
-        <div className="bg-[var(--ai-surface)]/50 backdrop-blur-md p-1 rounded-[var(--ai-radius)] shadow-xl border border-[var(--ai-text)]/10 ring-4 ring-[var(--ai-text)]/5">
+        <div className="bg-(--ai-surface)/50 backdrop-blur-md p-1 rounded-(--ai-radius) shadow-xl border border-(--ai-text)/10 ring-4 ring-(--ai-text)/5">
           <form
             onSubmit={handleChatSubmit}
             className="relative flex items-center"
           >
             <input
-              className="w-full h-16 pl-6 pr-16 rounded-[calc(var(--ai-radius)-4px)] bg-transparent text-xl sm:text-2xl text-[var(--ai-text)] placeholder-[var(--ai-text)]/40 focus:outline-none font-[family-name:var(--ai-font)]"
+              className="w-full h-16 pl-6 pr-16 rounded-[calc(var(--ai-radius)-4px)] bg-transparent text-xl sm:text-2xl text-(--ai-text) placeholder-(--ai-text)/40 focus:outline-none font-(family-name:--ai-font)"
               placeholder={`Ask anything about me!`}
               value={question}
               onChange={(e) => setQuestion(e.target.value)}
@@ -83,13 +83,13 @@ export const HomeSection: React.FC<HomeHeaderProps> = ({
               {isChatting ? (
                 <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin" />
               ) : (
-                <Send className="w-6 h-6 text-[var(--ai-background)]" />
+                <Send className="w-6 h-6 text-(--ai-background)" />
               )}
             </Button>
           </form>
         </div>
 
-        <p className="mt-4 text-sm text-[var(--ai-text)]/60">
+        <p className="mt-4 text-sm text-(--ai-text)/60">
           Try asking: "What are his strongest skills?" or "Does he have
           experience with React?"
         </p>

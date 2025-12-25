@@ -39,14 +39,14 @@ export const ThemeGenerator: React.FC<ThemeGeneratorProps> = ({
           onChange={(e) => setInput(e.target.value)}
           placeholder="(e.g. 'Coffee', 'Newspaper', 'Valorant')..."
           disabled={isGenerating}
-          className="flex-1 px-4 py-3 rounded-[var(--ai-radius)] border border-gray-300 focus:outline-none focus:ring-2 focus:ring-[var(--ai-primary)] text-black"
+          className="flex-1 px-4 py-3 rounded-(--ai-radius) border border-gray-300 focus:outline-none focus:ring-2 focus:ring-(--ai-primary) text-black"
         />
         <Button type="submit" disabled={isGenerating}>
           {isGenerating ? "..." : "Make it"}
         </Button>
       </form>
       {aiMessage && (
-        <p className="mt-4 text-red-500 bg-red-100 p-3 rounded-[var(--ai-radius)]">
+        <p className="mt-4 text-red-500 bg-red-100 p-3 rounded-(--ai-radius)">
           {aiMessage}
         </p>
       )}

@@ -17,7 +17,7 @@
       "degree": "Bachelor of Computer Science Honours (Co-op Option)",
       "startDate": "Sept. 2022",
       "endDate": "Present",
-      "gpa": "4.11 / 4.50",
+      "gpa": "4.09 / 4.50",
       "highlights": [
         "Dean’s Honour List (Fall 2022, Winter 2023)",
         "Hogg Centennial Entrance Scholarship (Sept. 2022)"
@@ -27,7 +27,7 @@
   "experience": [
     {
       "company": "Agriculture and Agri Food Canada",
-      "role": "Software Developer Intern",
+      "role": "Web Application Developer",
       "dates": "Sep. to Dec. 2025 (Full-Time)",
       "location": "Winnipeg, MB",
       "description": "Full-stack development in a small team working on two major production websites.",
@@ -96,9 +96,9 @@
     },
     {
       "name": "Grind Fuel Project Manager",
-      "role": "Project Manager (Software Engineering Group Project)",
+      "role": "Team Lead, Full-stack developer (Software Engineering Group Project)",
       "gitHub": "https://github.com/gloox/CrabbyGame",
-      "link": "link to project",
+      "link": "https://jremp.github.io/grindfuel/",
       "dates": "May 2025 – Current",
       "technologies": ["MySQL", "Java", "Swing"],
       "description": "Developing a project management software using Java (Swing), applying core software engineering principles."

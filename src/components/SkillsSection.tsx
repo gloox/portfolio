@@ -30,7 +30,7 @@ export const SkillsSection = ({
         <div className="space-y-8">
           {Object.entries(skills).map(([category, items]) => (
             <div key={category}>
-              <Text variant={"h4"} className="mb-3 text-[var(--ai-text)]/80">
+              <Text variant={"h4"} className="mb-3 text-(--ai-text)/80">
                 {formatKey(category)}
               </Text>
               <div className="flex flex-wrap gap-2">
@@ -38,7 +38,7 @@ export const SkillsSection = ({
                   <Text
                     key={"text-" + skill}
                     variant={"h4"}
-                    className="px-3 py-1.5 text-sm rounded-[var(--ai-radius)] bg-[var(--ai-surface)] border border-[length:var(--ai-border-width)] border-[var(--ai-text)]/20"
+                    className="px-3 py-1.5 text-sm rounded-(--ai-radius) bg-(--ai-surface) border border-(length:--ai-border-width) border-(--ai-text)/20"
                   >
                     {skill}
                   </Text>
@@ -59,17 +59,17 @@ export const SkillsSection = ({
               className="p-6"
             >
               <div className="flex items-center gap-2 mb-2">
-                <Code2 className="w-5 h-5 text-[var(--ai-primary)]" />
+                <Code2 className="w-5 h-5 text-(--ai-primary)" />
                 <Text variant="h3" className="text-xl">
                   {event.activity}
                 </Text>
               </div>
 
-              <p className="text-sm text-[var(--ai-text)]/60 mb-4 italic">
+              <p className="text-sm text-(--ai-text)/60 mb-4 italic">
                 {event.date}
               </p>
 
-              <Text variant="p" className="flex-grow text-sm mb-6">
+              <Text variant="p" className="grow text-sm mb-6">
                 {event.details}
               </Text>
             </Card>

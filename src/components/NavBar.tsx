@@ -5,7 +5,6 @@ import {
   Home,
   Briefcase,
   Code,
-  Sparkles,
   Menu,
   X,
   GraduationCap, BookImage, Wrench,
@@ -50,10 +49,10 @@ const NavBar = () => {
     <nav className={navClasses}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex justify-center items-center w-full">
         {/* Logo / Brand Area (Empty for now but preserves layout) */}
-        <div className="flex-shrink-0 font-[family-name:var(--ai-font)] font-bold text-[var(--ai-text)]"></div>
+        <div className="shrink-0 font-(family-name:--ai-font) font-bold text-(--ai-text)"></div>
 
         {/* DESKTOP NAVIGATION */}
-        <div className="hidden sm:flex items-center space-x-6 font-[family-name:var(--ai-font)]">
+        <div className="hidden sm:flex items-center space-x-6 font-(family-name:--ai-font)">
           {navItems.map((item) => (
             <a key={item.name} href={item.href} className={linkClasses}>
               <item.icon className="w-5 h-5" />
@@ -62,7 +61,7 @@ const NavBar = () => {
           ))}
 
           {/* Divider */}
-          <div className="h-6 w-[length:var(--ai-border-width)] bg-[var(--ai-text)]/20 mx-2"></div>
+          <div className="h-6 w-(--ai-border-width) bg-(--ai-text)/20 mx-2"></div>
 
           <StyleDropdown />
         </div>
@@ -73,7 +72,7 @@ const NavBar = () => {
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="p-2 text-[var(--ai-text)] hover:bg-[var(--ai-primary)]/10 rounded-[var(--ai-radius)] transition-colors"
+            className="p-2 text-(--ai-text) hover:bg-(--ai-primary)/10 rounded-(--ai-radius) transition-colors"
           >
             {isMobileMenuOpen ? (
               <X className="w-6 h-6" />
@@ -86,8 +85,8 @@ const NavBar = () => {
 
       {/* MOBILE MENU DROPDOWN */}
       {isMobileMenuOpen && (
-        <div className="sm:hidden absolute top-16 left-0 w-full bg-[var(--ai-surface)] border-b-[length:var(--ai-border-width)] border-[var(--ai-primary)]/20 p-4 shadow-xl animate-in slide-in-from-top-2">
-          <div className="flex flex-col space-y-2 font-[family-name:var(--ai-font)]">
+        <div className="sm:hidden absolute top-16 left-0 w-full bg-(--ai-surface) border-b-(length:--ai-border-width) border-(--ai-primary)/20 p-4 shadow-xl animate-in slide-in-from-top-2">
+          <div className="flex flex-col space-y-2 font-(family-name:--ai-font)">
             {navItems.map((item) => (
               <a
                 key={item.name}

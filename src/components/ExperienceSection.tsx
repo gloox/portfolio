@@ -18,23 +18,23 @@ export const ExperienceSection = ({
       <div className="space-y-8">
         {experiences.map((job, index) => (
           <Card
-              className="bg-[var(--ai-background)]"
+              className="bg-(--ai-background)"
             key={index}
           >
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
               <div>
-                <Text variant="h3" className="text-[var(--ai-text)]">
+                <Text variant="h3" className="text-(--ai-text)">
                   {job.role}
                 </Text>
                 <Text
                   variant="h4"
-                  className="text-[var(--ai-primary)] font-medium"
+                  className="text-(--ai-primary) font-medium"
                 >
                   {job.company}
                 </Text>
               </div>
 
-              <div className="flex flex-col gap-1 text-sm text-[var(--ai-text)]/60 font-[family-name:var(--ai-font)]">
+              <div className="flex flex-col gap-1 text-sm text-(--ai-text)/60 font-(family-name:--ai-font)">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
                   <span>{job.dates}</span>
@@ -50,13 +50,13 @@ export const ExperienceSection = ({
               {job.description}
             </Text>
 
-            <ul className="list-disc pl-5 space-y-2 marker:text-[var(--ai-primary)]">
+            <ul className="list-disc pl-5 space-y-2 marker:text-(--ai-primary)">
               {job.bullets.map(
                 (bullet, i) =>
                   bullet && (
                     <li
                       key={i}
-                      className="text-[var(--ai-text)]/80 text-sm leading-relaxed"
+                      className="text-(--ai-text)/80 text-sm leading-relaxed"
                     >
                       {bullet}
                     </li>

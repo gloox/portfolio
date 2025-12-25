@@ -18,17 +18,17 @@ export const ProjectsSection = ({ projects }: { projects: Project[] }) => {
             className="p-6"
           >
             <div className="flex items-center gap-2 mb-2">
-              <Code2 className="w-5 h-5 text-[var(--ai-primary)]" />
+              <Code2 className="w-5 h-5 text-(--ai-primary)" />
               <Text variant="h3" className="text-xl">
                 {project.name}
               </Text>
             </div>
 
-            <p className="text-sm text-[var(--ai-text)]/60 mb-4 italic">
+            <p className="text-sm text-(--ai-text)/60 mb-4 italic">
               {project.role} • {project.dates}
             </p>
 
-            <Text variant="p" className="flex-grow text-sm mb-6">
+            <Text variant="p" className="grow text-sm mb-6">
               {project.description}
             </Text>
 
@@ -36,7 +36,7 @@ export const ProjectsSection = ({ projects }: { projects: Project[] }) => {
               {project.technologies.map((tech, i) => (
                 <span
                   key={i}
-                  className="px-3 py-1 text-xs font-medium rounded-[calc(var(--ai-radius)/2)] bg-[var(--ai-primary)]/10 text-[var(--ai-primary)] border border-[length:var(--ai-border-width)] border-[var(--ai-primary)]/20"
+                  className="px-3 py-1 text-xs font-medium rounded-[calc(var(--ai-radius)/2)] bg-(--ai-primary)/10 text-(--ai-primary) border border-(length:--ai-border-width) border-(--ai-primary)/20"
                 >
                   {tech}
                 </span>

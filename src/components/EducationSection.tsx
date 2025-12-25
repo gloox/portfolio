@@ -14,39 +14,39 @@ export const EducationSection = ({ education }: { education: Education[] }) => {
       <div className="space-y-8">
         {education.map((edu, index) => (
           <Card
-              className="bg-[var(--ai-background)]"
+              className="bg-(--ai-background)"
               key={index}
           >
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
               <div>
                 <div className="flex items-center gap-3 mb-2">
-                  <GraduationCap className="w-6 h-6 text-[var(--ai-primary)]" />
-                  <Text variant="h3" className="text-[var(--ai-text)]">
+                  <GraduationCap className="w-6 h-6 text-(--ai-primary)" />
+                  <Text variant="h3" className="text-(--ai-text)">
                     {edu.institution}
                   </Text>
                 </div>
                 <Text
                   variant="h4"
-                  className="text-[var(--ai-primary)] font-medium text-lg"
+                  className="text-(--ai-primary) font-medium text-lg"
                 >
                   {edu.degree}
                 </Text>
               </div>
 
-              <div className="text-right text-[var(--ai-text)]/70 font-[family-name:var(--ai-font)]">
+              <div className="text-right text-(--ai-text)/70 font-(family-name:--ai-font)">
                 <p className="text-sm font-semibold">
                   {edu.startDate} – {edu.endDate}
                 </p>
                 <p className="text-sm mt-1">
                   GPA:{" "}
-                  <span className="text-[var(--ai-primary)]">{edu.gpa}</span>
+                  <span className="text-(--ai-primary)">{edu.gpa}</span>
                 </p>
               </div>
             </div>
 
             {/* Highlights / Awards */}
-            <div className="bg-[var(--ai-background)]/50 p-4 rounded-[calc(var(--ai-radius)/2)] border border-[var(--ai-text)]/5">
-              <h4 className="flex items-center gap-2 font-bold text-sm text-[var(--ai-text)]/80 mb-3">
+            <div className="bg-(--ai-background)/50 p-4 rounded-[calc(var(--ai-radius)/2)] border border-(--ai-text)/5">
+              <h4 className="flex items-center gap-2 font-bold text-sm text-(--ai-text)/80 mb-3">
                 <Award className="w-4 h-4" />
                 Honours & Awards
               </h4>
@@ -54,9 +54,9 @@ export const EducationSection = ({ education }: { education: Education[] }) => {
                 {edu.highlights.map((highlight, i) => (
                   <li
                     key={i}
-                    className="flex items-center gap-2 text-sm text-[var(--ai-text)]/70"
+                    className="flex items-center gap-2 text-sm text-(--ai-text)/70"
                   >
-                    <span className="w-1.5 h-1.5 rounded-full bg-[var(--ai-primary)]" />
+                    <span className="w-1.5 h-1.5 rounded-full bg-(--ai-primary)" />
                     {highlight}
                   </li>
                 ))}

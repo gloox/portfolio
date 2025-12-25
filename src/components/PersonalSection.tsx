@@ -21,13 +21,13 @@ export const PersonalSection = ({ interests }: PersonalSectionProps) => {
         {/* Books */}
         <Card>
           <div className="flex items-center gap-2 mb-4">
-            <Book className="w-5 h-5 text-[var(--ai-primary)]" />
+            <Book className="w-5 h-5 text-(--ai-primary)" />
             <Text variant="h3">Books I Love</Text>
           </div>
           <ul className="space-y-2">
             {interests.books.map((book, i) => (
-              <li key={i} className="text-[var(--ai-text)]/80 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-[var(--ai-primary)]/40" />
+              <li key={i} className="text-(--ai-text)/80 flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-(--ai-primary)/40" />
                 {book}
               </li>
             ))}
@@ -37,14 +37,14 @@ export const PersonalSection = ({ interests }: PersonalSectionProps) => {
         {/* Hobbies */}
         <Card>
           <div className="flex items-center gap-2 mb-4">
-            <Heart className="w-5 h-5 text-[var(--ai-primary)]" />
+            <Heart className="w-5 h-5 text-(--ai-primary)" />
             <Text variant="h3">Hobbies & Interests</Text>
           </div>
           <div className="flex flex-wrap gap-2">
             {interests.hobbies.map((hobby, i) => (
               <span
                 key={i}
-                className="px-3 py-1 rounded-full bg-[var(--ai-primary)]/10 text-[var(--ai-primary)] text-sm border border-[var(--ai-primary)]/20"
+                className="px-3 py-1 rounded-full bg-(--ai-primary)/10 text-(--ai-primary) text-sm border border-(--ai-primary)/20"
               >
                 {hobby}
               </span>
