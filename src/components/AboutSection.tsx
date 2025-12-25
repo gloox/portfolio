@@ -17,9 +17,9 @@ export const AboutSection = ({ personal }: AboutSectionProps) => {
   return (
     <Section id="about" className="py-20 text-center">
       <div className="max-w-2xl mx-auto">
-        <Text variant="h2" className="mb-6">Let's Connect</Text>
+        <Text variant="h2" className="mb-6">Talk to me!</Text>
         <Text variant="p" className="mb-10 text-[var(--ai-text)]/70">
-          I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.
+          I'm always open to discussing new projects, ideas, and opportunities. Just give me a shout!
         </Text>
         
         <div className="flex flex-wrap justify-center gap-4">

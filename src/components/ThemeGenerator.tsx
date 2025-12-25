@@ -31,7 +31,7 @@ export const ThemeGenerator: React.FC<ThemeGeneratorProps> = ({
   };
 
   return (
-    <div className="w-full max-w-md mt-8">
+    <div className="w-full max-w-md mt-4">
       <form onSubmit={handleSubmit} className="flex gap-4">
         <input
           type="text"

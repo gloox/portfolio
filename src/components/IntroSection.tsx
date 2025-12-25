@@ -26,9 +26,9 @@ const IntroSection: React.FC<IntroSectionProps> = ({
           />
         </Text>
 
-        <Text variant="h3" className="mt-4">
+        <Text variant="h3" className="mt-8">
           <Typewriter
-            text="Enter what you want this webstite to look like."
+            text="Describe a vibe or aesthetic you want this website to have:"
             delay={1}
           />
         </Text>

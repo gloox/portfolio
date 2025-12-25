@@ -8,7 +8,7 @@ import {
   Sparkles,
   Menu,
   X,
-  GraduationCap,
+  GraduationCap, BookImage, Wrench,
 } from "lucide-react";
 import clsx from "clsx";
 import { StyleDropdown } from "./StyleDropdown";
@@ -16,11 +16,11 @@ import { useTheme } from "@/context/ThemeContext";
 
 const navItems = [
   { name: "Home", href: "#home", icon: Home },
-  { name: "Personal", href: "#personal", icon: Sparkles },
-  { name: "Education", href: "#education", icon: GraduationCap },
-  { name: "Experience", href: "#experience", icon: Briefcase },
   { name: "Projects", href: "#projects", icon: Code },
-  { name: "Skills", href: "#skills", icon: Sparkles },
+  { name: "Personal", href: "#personal", icon: BookImage },
+  { name: "Experience", href: "#experience", icon: Briefcase },
+  { name: "Skills", href: "#skills", icon: Wrench },
+  { name: "Education", href: "#education", icon: GraduationCap },
   { name: "Contact", href: "#about", icon: Briefcase },
 ];
 

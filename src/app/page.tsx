@@ -115,15 +115,14 @@ const PortfolioPage = () => {
         `}
       >
         <HomeSection personal={data.personal} education={data.education} />
-        <PersonalSection interests={data.personal.interests} />
-
-        <EducationSection education={data.education} />
-        <ExperienceSection experiences={data.experience} />
         <ProjectsSection projects={data.projects} />
+        <PersonalSection interests={data.personal.interests} />
+        <ExperienceSection experiences={data.experience} />
         <SkillsSection
-          skills={data.skills}
-          extracurricular={data.extracurricular}
+            skills={data.skills}
+            extracurricular={data.extracurricular}
         />
+        <EducationSection education={data.education} />
         <AboutSection personal={data.personal} />
       </div>
     </>
