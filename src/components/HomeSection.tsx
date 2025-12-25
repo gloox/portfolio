@@ -95,15 +95,15 @@ export const HomeSection: React.FC<HomeHeaderProps> = ({
         </p>
 
         {chatReply && (
-          <div className="mt-8 p-6 text-left shadow-lg animate-in zoom-in-95 duration-300 rounded-[var(--ai-radius)] bg-[var(--ai-surface)] border border-[var(--ai-primary)]/20">
+          <div className="mt-8 p-6 text-left shadow-lg animate-in zoom-in-95 duration-300 rounded-(--ai-radius) bg-(--ai-surface) border border-(--ai-primary)/20">
             <div className="flex gap-3">
-              <div className="flex-shrink-0 w-8 h-8 rounded-full bg-[var(--ai-primary)] flex items-center justify-center font-bold text-sm text-[var(--ai-background)]">
+              <div className="shrink-0 w-8 h-8 rounded-full bg-(--ai-primary) flex items-center justify-center font-bold text-sm text-(--ai-background)">
                 AI
               </div>
               <div className="prose">
                 <Text
                   variant="p"
-                  className="text-lg leading-relaxed text-[var(--ai-text)]"
+                  className="text-lg leading-relaxed text-(--ai-text)"
                 >
                   {chatReply}
                 </Text>

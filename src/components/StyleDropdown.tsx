@@ -97,7 +97,6 @@ export const StyleDropdown = () => {
                   type="submit"
                   disabled={isGenerating}
                   className="w-full py-2 text-sm"
-                  variant="primary"
                 >
                   {isGenerating ? "Generating..." : "Apply Style"}
                 </Button>

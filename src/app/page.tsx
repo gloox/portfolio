@@ -17,9 +17,6 @@ import NavBar from "@/components/NavBar";
 import { PersonalSection } from "@/components/PersonalSection";
 import { AboutSection } from "@/components/AboutSection";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
-const API_URL = `${API_BASE_URL}/api/portfolio`;
-
 const PortfolioPage = () => {
   const [data, setData] = useState<PortfolioData | null>(null);
   const [loading, setLoading] = useState(true);
@@ -70,7 +67,7 @@ const PortfolioPage = () => {
     return (
       <div
         className={`
-            bg-[var(--ai-background)]
+            bg-(--ai-background)
             transition-colors duration-500
         `}
       >
@@ -110,7 +107,7 @@ const PortfolioPage = () => {
 
       <div
         className={`
-            bg-[var(--ai-background)]
+            bg-(--ai-background)
             transition-colors duration-500
         `}
       >

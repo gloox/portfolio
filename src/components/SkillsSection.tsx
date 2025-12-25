@@ -2,7 +2,7 @@ import React from "react";
 import { Skills, Extracurricular } from "@/types";
 import { Section } from "./basic/Section";
 import { Text } from "./basic/Text";
-import { Code2, Trophy, Wrench } from "lucide-react";
+import { Code2 } from "lucide-react";
 import {SectionTitle} from "@/components/basic/SectionTitle";
 import {Card} from "@/components/basic/Card";
 
