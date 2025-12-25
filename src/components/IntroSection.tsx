@@ -1,17 +1,14 @@
 import React from "react";
-import { Personal } from "@/types";
 import { Section } from "@/components/basic/Section";
 import { Text } from "@/components/basic/Text";
 import { Typewriter } from "@/components/basic/TypeWriterAnimation";
 import { ThemeGenerator } from "@/components/ThemeGenerator";
 
 interface IntroSectionProps {
-  personal: Personal;
   onComplete: () => void;
 }
 
 const IntroSection: React.FC<IntroSectionProps> = ({
-  personal,
   onComplete,
 }) => {
   return (
@@ -22,7 +19,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
       <div className="w-full max-w-3xl">
         <Text variant="h1">
           <Typewriter
-            text={`Hi, this is ${personal.firstName}'s portfolioLM`}
+            text={`Hi, this is Geet's portfolioLM`}
           />
         </Text>
 

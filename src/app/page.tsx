@@ -78,7 +78,7 @@ const PortfolioPage = () => {
           <div className="space-y-6">
             <Text variant="h2">
               <Typewriter
-                text={`Ok, that was fun. Fun fact: this is actually a website to try to get ${data.personal.firstName} hired.`}
+                text={`Ok, that was fun. Fun fact: this is actually a website to try to get me hired.`}
                 delay={0.1}
               />
             </Text>
@@ -115,16 +115,16 @@ const PortfolioPage = () => {
         `}
       >
 
-        <ExperienceSection experiences={data.experience} />
-        <EducationSection education={data.education} />
 
         <HomeSection personal={data.personal} education={data.education} />
         <ProjectsSection projects={data.projects} />
         <PersonalSection interests={data.personal.interests} />
+        <ExperienceSection experiences={data.experience} />
         <SkillsSection
             skills={data.skills}
             extracurricular={data.extracurricular}
         />
+        <EducationSection education={data.education} />
         <AboutSection personal={data.personal} />
       </div>
     </>

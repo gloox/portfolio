@@ -52,7 +52,7 @@ export const HomeSection: React.FC<HomeHeaderProps> = ({
       <div className="space-y-6">
         <Text variant="h1">
           <Typewriter
-            text={`Hi hi, I'm ${personal.firstName} ${personal.lastName}.`}
+            text={`Hi hi, I'm Geet Loomba.`}
             delay={0.1}
           />
         </Text>

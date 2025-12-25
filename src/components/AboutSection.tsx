@@ -20,7 +20,7 @@ export const AboutSection = ({ personal }: AboutSectionProps) => {
       <div className="max-w-2xl mx-auto">
         <Text variant="h2" className="mb-6">Talk to me!</Text>
         <Text variant="p" className="mb-10 text-[var(--ai-text)]/70">
-          I'm always open to discussing new projects, ideas, and opportunities. Just give me a shout!
+          Give me a shout! I'm super interested in basically everything so I don't think you'll be dissapointed.
         </Text>
         
         <div className="flex flex-wrap justify-center gap-4">
