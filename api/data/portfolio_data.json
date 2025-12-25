@@ -27,21 +27,24 @@
   "experience": [
     {
       "company": "Agriculture and Agri Food Canada",
-      "role": "Systems Step Student",
+      "role": "Software Developer Intern",
       "dates": "Sep. to Dec. 2025 (Full-Time)",
-      "location": "Winnipeg, MB (Implicit)",
+      "location": "Winnipeg, MB",
       "description": "Full-stack development in a small team working on two major production websites.",
       "bullets": [
-        "Migrated the front-end for FIGE from Vue 2 to Vue 3 solo",
-        "Front-end design and implementation for multiple production websites, particularly a modular React Notifications System",
-        ""
+        "Spearheaded the complete front-end migration of the FIGE production application from Vue 2 to Vue 3 independently, modernizing the codebase for long-term maintainability.",
+        "Architected and developed 7+ administrative screens for the XMTS rewrite, implementing services that established a strict separation between controller and persistence layers.",
+        "Pioneered the team's front-end testing strategy by researching and integrating ViTest into a legacy Vue 2 environment, establishing the project's first automated test suite.",
+        "Engineered robust error handling for application initialization, preventing critical UI deadlocks during failed network requests, and resolved race conditions in file upload polling systems.",
+        "Designed a modular Notification System and refined the look-and-feel of complex financial reports (expenses and program payments) to enhance user experience.",
+        "Applied Test-Driven Development (TDD) methodologies to backend feature implementation, ensuring high code coverage and reducing regression bugs."
       ]
     },
     {
       "company": "Public Guardian And Trustee of Manitoba",
       "role": "Systems Step Student",
-      "dates": "Apr. 2024 – Aug. 2024 (Full-Time); Jan. 2025 - Apr. 2025 (Full-Time); Sep. 2024 – Dec. 2024 (Part-Time)",
-      "location": "Winnipeg, MB (Implicit)",
+      "dates": "Apr. 2024 – Aug. 2024, Jan. 2025 - Apr. 2025 (Full-Time); Sep. 2024 – Dec. 2024 (Part-Time)",
+      "location": "Winnipeg, MB",
       "description": "Managed the full software development lifecycle for internal windows tools and collaborated on core enterprise applications.",
       "bullets": [
         "Developed and launched an internal .NET/WinForms search engine tool, independently managing its lifecycle over two months, significantly improving the mail department's efficiency via a unified and intuitive user interface.",
@@ -56,15 +59,19 @@
   ],
   "projects": [
     {
-      "activity": "TBC: Crabby Game: A 2D Platformer with a Crab-themed Theme",
-      "organization": "University Of Manitoba",
+      "name": "TBC: Crabby Game: A 2D Platformer with a Crab-themed Theme",
+      "role": "Team Lead, Developer",
+      "gitHub": "https://github.com/gloox/CrabbyGame",
+      "link": "link to project",
       "date": "Nov. 2025",
       "technologies": ["Python", "pygame"],
-      "details": "Won audience choice and most potential (based on highest critic ratings on game quality and game mechanics) for the CSSA Game Jam 2025: Crabby Game."
+      "description": "Won audience choice and most potential (based on highest critic ratings on game quality and game mechanics) for the CSSA Game Jam 2025: Crabby Game."
     },
     {
       "name": "TBC: WhirlyBird Clone",
       "role": "Developer",
+      "gitHub": "https://github.com/gloox/CrabbyGame",
+      "link": "link to project",
       "dates": "2021, Jan. 2024",
       "technologies": ["Python", "pygame"],
       "description": "Created a local multiplayer chess application with an interactive Pygame interface."
@@ -72,6 +79,8 @@
     {
       "name": "TBC: Something similar to the yard website for dear hank and john or for all pods I listen to",
       "role": "Developer",
+      "gitHub": "https://github.com/gloox/CrabbyGame",
+      "link": "link to project",
       "dates": "2021, Jan. 2024",
       "technologies": ["Python", "pygame"],
       "description": "Created a local multiplayer chess application with an interactive Pygame interface."
@@ -79,6 +88,8 @@
     {
       "name": "TBC: This Website",
       "role": "Developer",
+      "gitHub": "https://github.com/gloox/CrabbyGame",
+      "link": "link to project",
       "dates": "2021, Jan. 2024",
       "technologies": ["Python", "pygame"],
       "description": "Created a local multiplayer chess application with an interactive Pygame interface."
@@ -86,6 +97,8 @@
     {
       "name": "Grind Fuel Project Manager",
       "role": "Project Manager (Software Engineering Group Project)",
+      "gitHub": "https://github.com/gloox/CrabbyGame",
+      "link": "link to project",
       "dates": "May 2025 – Current",
       "technologies": ["MySQL", "Java", "Swing"],
       "description": "Developing a project management software using Java (Swing), applying core software engineering principles."
@@ -93,6 +106,8 @@
     {
       "name": "GROCER",
       "role": "Collaborative Developer (Human Computer Interaction Group Project)",
+      "gitHub": "https://github.com/gloox/CrabbyGame",
+      "link": "link to project",
       "dates": "Sep. 2024 – Dec. 2024",
       "technologies": ["JavaScript", "HTML/CSS"],
       "description": "Collaboratively developed a grocery website using an iterative user-oriented design process through user stories, interviews, paper prototypes, and a horizontal prototype."
@@ -100,6 +115,8 @@
     {
       "name": "SchoolTools",
       "role": "Collaborative Developer (Web App Project)",
+      "gitHub": "https://github.com/gloox/CrabbyGame",
+      "link": "link to project",
       "dates": "Apr. 2023 – Jan. 2025",
       "technologies": ["React", "JavaScript", "HTML/CSS"],
       "description": "Developed features for a web application, including a grade calculator, PDF merger, and PDF-to-text converter."
@@ -107,6 +124,8 @@
     {
       "name": "Movie Analysis Database",
       "role": "Developer (Databases Group Project)",
+      "gitHub": "https://github.com/gloox/CrabbyGame",
+      "link": "link to project",
       "dates": "Sept. 2023 – Dec. 2023",
       "technologies": ["MySQL", "Java"],
       "description": "Designed and developed a normalized database, including a console interface and 40 complex SQL queries."
@@ -114,6 +133,8 @@
     {
       "name": "Pixel Chess",
       "role": "Developer",
+      "gitHub": "https://github.com/gloox/CrabbyGame",
+      "link": "link to project",
       "dates": "2021, Jan. 2024",
       "technologies": ["Python", "pygame"],
       "description": "Created a local multiplayer chess application with an interactive Pygame interface."
