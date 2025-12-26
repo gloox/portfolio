@@ -11,7 +11,6 @@ const PopIn: React.FC<PopInProps> = ({
   children,
   delay = 0,
   className = "",
-  ...props // Spreads any other div props like 'style' or 'id'
 }) => {
   return (
     <motion.div
@@ -26,7 +25,6 @@ const PopIn: React.FC<PopInProps> = ({
       }}
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}
-      {...props}
     >
       {children}
     </motion.div>

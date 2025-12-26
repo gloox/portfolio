@@ -12,8 +12,6 @@ export const Typewriter = ({ text, delay = 0 }: TypewriterProps) => {
   const letters = Array.from(text);
 
   useEffect(() => {
-    // The modern way: animate the selector ".letter"
-    // using the stagger() utility directly in the transition
     animate(
       ".letter",
       { opacity: 1, display: "inline-block" },

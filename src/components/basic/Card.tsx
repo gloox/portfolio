@@ -12,9 +12,9 @@ export const Card = ({ children, className, ...props }: CardProps) => {
 
               className={cn(
                 "   p-8 rounded-(--ai-radius) bg-(--ai-surface) ",
-                "border border-(length:--ai-border-width) border-(--ai-primary)/20 ",
+                "border border-(length:--ai-border-width) border-(--ai-secondary)/20 ",
                 "transition-all duration-300 ",
-               " hover:border-(--ai-primary)/50 hover:-translate-y-1 shadow-sm",
+               " hover:border-(--ai-secondary)/50 hover:-translate-y-1 shadow-sm",
                 "bg-(--ai-surface)",
                 className,
               )}

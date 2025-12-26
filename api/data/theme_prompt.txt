@@ -12,7 +12,6 @@ OPTION 1: SUCCESS (Valid Style Request)
 "primary": "#HEXCODE",
 "primaryHover": "#HEXCODE",
 "secondary": "#HEXCODE",
-"secondaryHover": "#HEXCODE",
 "background": "#HEXCODE",
 "text": "#HEXCODE",
 "surface": "#HEXCODE"      // For Cards/Navbar (usually slightly offset from background)
@@ -31,6 +30,5 @@ OPTION 2: FAILURE
 
 DESIGN RULES:
 - "surface" should be a color that stands out slightly against "background" (e.g., if bg is black, surface is dark gray).
-- If the vibe is "Old School" or "Newspaper" or something similar, use "serif".
-- If "Coding" or "Hacker" or something similar use "mono".
-- Otherwise, "sans" is safe.
+- "secondary" MUST be a color that stands out against "background" and "surface" while complementing "primary".
+- If the vibe described with complemented by a "mono" or "serif" font, use it. Otherwise, "sans" is safe.

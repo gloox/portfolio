@@ -1,9 +1,7 @@
-// src/components/ThemeGenerator.tsx
 import React, { useState } from "react";
 import { useTheme } from "@/context/ThemeContext";
 import { Button } from "./basic/Button";
 
-// 1. Add the prop interface
 interface ThemeGeneratorProps {
   onSuccess?: () => void;
 }

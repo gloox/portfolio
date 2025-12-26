@@ -15,6 +15,8 @@ DATA_FILE_PATH = Path(__file__).parent / "data" / "portfolio_data.json"
 THEME_PROMPT_PATH = Path(__file__).parent / "data" / "theme_prompt.txt"
 THEME_PROMPT = THEME_PROMPT_PATH.read_text()
 
+print(THEME_PROMPT)
+
 GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
 if GOOGLE_API_KEY:
