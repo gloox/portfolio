@@ -55,8 +55,8 @@ const PortfolioPage = () => {
         <PersonalSection interests={data.personal.interests} />
         <ExperienceSection experiences={data.experience} />
         <SkillsSection
-            skills={data.skills}
-            extracurricular={data.extracurricular}
+          skills={data.skills}
+          extracurricular={data.extracurricular}
         />
         <EducationSection education={data.education} />
         <AboutSection personal={data.personal} />

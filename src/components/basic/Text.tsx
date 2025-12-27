@@ -2,7 +2,7 @@ import { ElementType, HTMLAttributes, ReactNode } from "react";
 import { cn } from "@/utils/cn";
 
 interface TextProps extends HTMLAttributes<HTMLElement> {
-  variant?: "h1" | "h2" | "h3" | "h4" | "p" | "blockquote";
+  variant?: "h1" | "h2" | "h3" | "h4" | "p" | "li";
   children: ReactNode;
   className?: string;
 }
@@ -13,7 +13,6 @@ export const Text = ({
   className,
   ...props
 }: TextProps) => {
-
   const baseClass =
     "font-[family-name:var(--ai-font)] text-[var(--ai-text)] transition-colors duration-500";
 
@@ -22,8 +21,8 @@ export const Text = ({
     h2: "text-4xl font-semibold tracking-tight",
     h3: "text-2xl font-semibold tracking-tight",
     h4: "text-xl font-bold tracking-tight",
-    p: "leading-7 [&:not(:first-child)]:mt-6",
-    blockquote: "mt-6 border-l-2 pl-6 italic border-[var(--ai-primary)]",
+    p: "leading-7",
+    li: "text-(--ai-text)/80 text-sm leading-relaxed",
   };
 
   const Component = variant as ElementType;

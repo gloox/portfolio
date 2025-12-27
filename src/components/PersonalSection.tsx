@@ -2,9 +2,9 @@ import React from "react";
 import { Section } from "./basic/Section";
 import { Text } from "./basic/Text";
 import { Book, Heart } from "lucide-react";
-import {SectionTitle} from "@/components/basic/SectionTitle";
-import {Card} from "@/components/basic/Card";
-import {Bubble} from "@/components/basic/Bubble";
+import { SectionTitle } from "@/components/basic/SectionTitle";
+import { Card } from "@/components/basic/Card";
+import { Bubble } from "@/components/basic/Bubble";
 
 interface PersonalSectionProps {
   interests: {
@@ -27,9 +27,9 @@ export const PersonalSection = ({ interests }: PersonalSectionProps) => {
           </div>
           <ul className="list-disc pl-5 space-y-2 marker:text-(--ai-primary)">
             {interests.books.map((book, i) => (
-              <li key={i} className="text-(--ai-text)/80 text-sm leading-relaxed">
+              <Text variant="li" key={i}>
                 {book}
-              </li>
+              </Text>
             ))}
           </ul>
         </Card>
@@ -42,11 +42,7 @@ export const PersonalSection = ({ interests }: PersonalSectionProps) => {
           </div>
           <div className="flex flex-wrap gap-2">
             {interests.hobbies.map((hobby, i) => (
-
-              <Bubble
-                key={i}
-                className="text-sm"
-              >
+              <Bubble key={i} className="text-sm">
                 {hobby}
               </Bubble>
             ))}

@@ -3,19 +3,17 @@ import { Education } from "@/types";
 import { Section } from "./basic/Section";
 import { Text } from "./basic/Text";
 import { GraduationCap, Award } from "lucide-react";
-import {SectionTitle} from "@/components/basic/SectionTitle";
-import {Card} from "@/components/basic/Card";
+import { SectionTitle } from "@/components/basic/SectionTitle";
+import { Card } from "@/components/basic/Card";
 
 export const EducationSection = ({ education }: { education: Education[] }) => {
   return (
     <Section id="education">
-        <SectionTitle>Education</SectionTitle>
+      <SectionTitle>Education</SectionTitle>
 
       <div className="space-y-8">
         {education.map((edu, index) => (
-          <Card
-              key={index}
-          >
+          <Card key={index}>
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
               <div>
                 <div className="flex items-center gap-3 mb-2">
@@ -37,27 +35,30 @@ export const EducationSection = ({ education }: { education: Education[] }) => {
                   {edu.startDate} – {edu.endDate}
                 </p>
                 <p className="text-sm mt-1">
-                  GPA:{" "}
-                  <span className="text-(--ai-primary)">{edu.gpa}</span>
+                  GPA: <span className="text-(--ai-primary)">{edu.gpa}</span>
                 </p>
               </div>
             </div>
 
             {/* Highlights / Awards */}
             <div className="bg-(--ai-background)/50 p-4 rounded-[calc(var(--ai-radius)/2)] border border-(--ai-text)/5">
-              <h4 className="flex items-center gap-2 font-bold text-sm text-(--ai-text)/80 mb-3">
+              <Text
+                variant="h4"
+                className="flex items-center gap-2 font-bold text-sm text-(--ai-text)/80 mb-3"
+              >
                 <Award className="w-4 h-4" />
                 Honours & Awards
-              </h4>
+              </Text>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                 {edu.highlights.map((highlight, i) => (
-                  <li
+                  <Text
+                    variant="li"
                     key={i}
                     className="flex items-center gap-2 text-sm text-(--ai-text)/70"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-(--ai-primary)" />
                     {highlight}
-                  </li>
+                  </Text>
                 ))}
               </ul>
             </div>

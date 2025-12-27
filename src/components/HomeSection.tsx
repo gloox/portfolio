@@ -51,10 +51,7 @@ export const HomeSection: React.FC<HomeHeaderProps> = ({
     >
       <div className="space-y-6">
         <Text variant="h1">
-          <Typewriter
-            text={`Hi hi, I'm Geet Loomba.`}
-            delay={0.1}
-          />
+          <Typewriter text={`Hi hi, I'm Geet Loomba.`} delay={0.1} />
         </Text>
         <Text variant="h3" className="opacity-80 max-w-2xl">
           {personal.title} from {education.institution} {personal.location}.{" "}
@@ -89,10 +86,10 @@ export const HomeSection: React.FC<HomeHeaderProps> = ({
           </form>
         </div>
 
-        <p className="mt-4 text-sm text-(--ai-text)/60">
+        <Text variant="p" className="mt-4 text-sm text-(--ai-text)/60">
           Try asking: "What are his strongest skills?" or "Does he have
           experience with React?"
-        </p>
+        </Text>
 
         {chatReply && (
           <div className="mt-8 p-6 text-left shadow-lg animate-in zoom-in-95 duration-300 rounded-(--ai-radius) bg-(--ai-surface) border border-(--ai-primary)/20">

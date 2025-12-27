@@ -38,10 +38,7 @@ export const StyleDropdown = () => {
   };
 
   return (
-    <div
-      className="relative font-(family-name:--ai-font)"
-      ref={dropdownRef}
-    >
+    <div className="relative font-(family-name:--ai-font)" ref={dropdownRef}>
       {/* The Trigger Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}

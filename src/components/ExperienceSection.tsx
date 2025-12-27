@@ -3,8 +3,8 @@ import { Experience } from "@/types";
 import { Section } from "./basic/Section";
 import { Text } from "./basic/Text";
 import { Calendar, MapPin } from "lucide-react";
-import {SectionTitle} from "@/components/basic/SectionTitle";
-import {Card} from "@/components/basic/Card";
+import { SectionTitle } from "@/components/basic/SectionTitle";
+import { Card } from "@/components/basic/Card";
 
 export const ExperienceSection = ({
   experiences,
@@ -13,22 +13,17 @@ export const ExperienceSection = ({
 }) => {
   return (
     <Section id="experience">
-        <SectionTitle>Experience</SectionTitle>
+      <SectionTitle>Experience</SectionTitle>
 
       <div className="space-y-8">
         {experiences.map((job, index) => (
-          <Card
-            key={index}
-          >
+          <Card key={index}>
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
               <div>
                 <Text variant="h3" className="text-(--ai-text)">
                   {job.role}
                 </Text>
-                <Text
-                  variant="h4"
-                  className="text-(--ai-primary) font-medium"
-                >
+                <Text variant="h4" className="text-(--ai-primary) font-medium">
                   {job.company}
                 </Text>
               </div>
@@ -53,12 +48,9 @@ export const ExperienceSection = ({
               {job.bullets.map(
                 (bullet, i) =>
                   bullet && (
-                    <li
-                      key={i}
-                      className="text-(--ai-text)/80 text-sm leading-relaxed"
-                    >
+                    <Text variant="li" key={i}>
                       {bullet}
-                    </li>
+                    </Text>
                   ),
               )}
             </ul>

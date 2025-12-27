@@ -8,9 +8,7 @@ interface IntroSectionProps {
   onComplete: () => void;
 }
 
-const IntroSection: React.FC<IntroSectionProps> = ({
-  onComplete,
-}) => {
+const IntroSection: React.FC<IntroSectionProps> = ({ onComplete }) => {
   return (
     <Section
       className="min-h-screen flex flex-col justify-center px-20 max-w-full"
@@ -18,9 +16,7 @@ const IntroSection: React.FC<IntroSectionProps> = ({
     >
       <div className="w-full max-w-3xl">
         <Text variant="h1">
-          <Typewriter
-            text={`Hi, this is Geet's portfolioLM`}
-          />
+          <Typewriter text={`Hi, this is Geet's portfolioLM`} />
         </Text>
 
         <Text variant="h3" className="mt-8">

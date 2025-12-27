@@ -7,7 +7,9 @@ import {
   Code,
   Menu,
   X,
-  GraduationCap, BookImage, Wrench,
+  GraduationCap,
+  BookImage,
+  Wrench,
 } from "lucide-react";
 import clsx from "clsx";
 import { StyleDropdown } from "./StyleDropdown";

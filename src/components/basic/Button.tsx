@@ -14,13 +14,13 @@ export const Button = ({
   href,
   ...props
 }: ButtonProps) => {
-
   const combinedStyles = cn(
-      "inline-flex items-center justify-center px-6 py-3 font-semibold shadow-lg transition " +
+    "inline-flex items-center justify-center px-6 py-3 font-semibold shadow-lg transition " +
       "transform hover:scale-105 active:scale-95 rounded-[var(--ai-radius)] " +
       "border-[length:var(--ai-border-width)] font-[family-name:var(--ai-font)]",
-      "bg-[var(--ai-primary)] hover:bg-[var(--ai-primary-hover)] text-[var(--ai-background)]",
-      className);
+    "bg-[var(--ai-primary)] hover:bg-[var(--ai-primary-hover)] text-[var(--ai-background)]",
+    className,
+  );
 
   if (href) {
     return (

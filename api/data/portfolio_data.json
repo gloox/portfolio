@@ -7,8 +7,23 @@
     "linkedin": "https://www.linkedin.com/in/geet-loomba-a197bb2a1/",
     "github": "https://github.com/gloox",
     "interests": {
-      "books": ["Slaughter House 5", "The Count of Monte Cristo", "The Anthropocene Reviewed", "The Bluest Eye"],
-      "hobbies": ["Weightlifting", "Tech (duh)", "Anime", "Fashion History", "Podcasts", "F1", "Sports In General", "Philosophy", "Arcitecture"]
+      "books": [
+        "Slaughter House 5",
+        "The Count of Monte Cristo",
+        "The Anthropocene Reviewed",
+        "The Bluest Eye"
+      ],
+      "hobbies": [
+        "Weightlifting",
+        "Tech (duh)",
+        "Anime",
+        "Fashion History",
+        "Podcasts",
+        "F1",
+        "Sports In General",
+        "Philosophy",
+        "Arcitecture"
+      ]
     }
   },
   "education": [

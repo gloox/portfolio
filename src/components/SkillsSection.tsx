@@ -3,8 +3,8 @@ import { Skills, Extracurricular } from "@/types";
 import { Section } from "./basic/Section";
 import { Text } from "./basic/Text";
 import { Code2 } from "lucide-react";
-import {SectionTitle} from "@/components/basic/SectionTitle";
-import {Card} from "@/components/basic/Card";
+import { SectionTitle } from "@/components/basic/SectionTitle";
+import { Card } from "@/components/basic/Card";
 import { Bubble } from "./basic/Bubble";
 
 interface SkillsSectionProps {
@@ -36,12 +36,7 @@ export const SkillsSection = ({
               </Text>
               <div className="flex flex-wrap gap-2">
                 {(items as string[]).map((skill, i) => (
-                    <Bubble
-                    className="text-sm"
-                    >
-                        {skill}
-                    </Bubble>
-
+                  <Bubble className="text-sm">{skill}</Bubble>
                 ))}
               </div>
             </div>
@@ -54,10 +49,7 @@ export const SkillsSection = ({
 
         <div className="space-y-6">
           {extracurricular.map((event, index) => (
-            <Card
-              key={index}
-              className="p-6"
-            >
+            <Card key={index} className="p-6">
               <div className="flex items-center gap-2 mb-2">
                 <Code2 className="w-5 h-5 text-(--ai-primary)" />
                 <Text variant="h3" className="text-xl">
@@ -65,9 +57,12 @@ export const SkillsSection = ({
                 </Text>
               </div>
 
-              <p className="text-sm text-(--ai-text)/60 mb-4 italic">
+              <Text
+                variant="p"
+                className="text-sm text-(--ai-text)/60 mb-4 italic"
+              >
                 {event.date}
-              </p>
+              </Text>
 
               <Text variant="p" className="grow text-sm mb-6">
                 {event.details}
