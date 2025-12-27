@@ -61,7 +61,11 @@ export const HomeSection: React.FC<HomeHeaderProps> = ({
       </div>
 
       <Button href="/pixelChess/index.html" target="_blank" rel="noopener noreferrer">
-        Play My Chess Game
+        Play Pixel Chess
+      </Button>
+
+      <Button href="/ticTechToe/index.html" target="_blank" rel="noopener noreferrer">
+        Play Tic Tech Toe (mega buggy)
       </Button>
 
       <div className="w-full max-w-2xl mt-8">
