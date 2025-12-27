@@ -4,5 +4,14 @@
       "source": "/api/(.*)",
       "destination": "/api/index.py"
     }
+  ],
+  "headers": [
+    {
+      "source": "/chess/(.*)",
+      "headers": [
+        { "key": "Cross-Origin-Opener-Policy", "value": "same-origin" },
+        { "key": "Cross-Origin-Embedder-Policy", "value": "require-corp" }
+      ]
+    }
   ]
 }

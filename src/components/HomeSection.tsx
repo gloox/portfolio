@@ -49,6 +49,7 @@ export const HomeSection: React.FC<HomeHeaderProps> = ({
       id="home"
       className="pt-20 flex flex-col justify-center items-center text-center gap-10"
     >
+
       <div className="space-y-6">
         <Text variant="h1">
           <Typewriter text={`Hi hi, I'm Geet Loomba.`} delay={0.1} />
@@ -58,6 +59,10 @@ export const HomeSection: React.FC<HomeHeaderProps> = ({
           <br />
         </Text>
       </div>
+
+      <Button href="/pixelChess/index.html" target="_blank" rel="noopener noreferrer">
+        Play My Chess Game
+      </Button>
 
       <div className="w-full max-w-2xl mt-8">
         <div className="bg-(--ai-surface)/50 backdrop-blur-md p-1 rounded-(--ai-radius) shadow-xl border border-(--ai-text)/10 ring-4 ring-(--ai-text)/5">
