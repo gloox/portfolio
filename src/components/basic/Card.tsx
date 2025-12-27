@@ -9,7 +9,6 @@ interface CardProps {
 export const Card = ({ children, className, ...props }: CardProps) => {
     return (
         <div
-
               className={cn(
                 "   p-8 rounded-(--ai-radius) bg-(--ai-surface) ",
                 "border border-(length:--ai-border-width) border-(--ai-secondary)/20 ",

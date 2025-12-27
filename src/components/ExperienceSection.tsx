@@ -49,7 +49,7 @@ export const ExperienceSection = ({
               {job.description}
             </Text>
 
-            <ul className="list-disc pl-5 space-y-2 marker:text-(--ai-secondary)">
+            <ul className="list-disc pl-5 space-y-2 marker:text-(--ai-primary)">
               {job.bullets.map(
                 (bullet, i) =>
                   bullet && (

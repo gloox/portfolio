@@ -13,8 +13,7 @@ export const Text = ({
   className,
   ...props
 }: TextProps) => {
-  // We add 'font-[family-name:var(--ai-font)]' to everything
-  // We also use 'text-[var(--ai-text)]' to ensure color consistency
+
   const baseClass =
     "font-[family-name:var(--ai-font)] text-[var(--ai-text)] transition-colors duration-500";
 

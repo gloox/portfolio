@@ -69,12 +69,12 @@ export const StyleDropdown = () => {
               <div className="flex items-center gap-2">
                 <Sparkles className="w-5 h-5 text-(--ai-primary)" />
                 <h3 className="text-sm font-medium text-(--ai-text)">
-                  AI Theme Generator
+                  Theme Generator
                 </h3>
               </div>
 
               <p className="text-xs text-(--ai-text)/60">
-                Describe a new look and the AI will repaint the website.
+                Describe a new look and the website will change.
               </p>
 
               <form onSubmit={handleSubmit} className="flex flex-col gap-3">

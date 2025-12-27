@@ -25,10 +25,9 @@ export const PersonalSection = ({ interests }: PersonalSectionProps) => {
             <Book className="w-5 h-5 text-(--ai-primary)" />
             <Text variant="h3">Books I Love</Text>
           </div>
-          <ul className="space-y-2">
+          <ul className="list-disc pl-5 space-y-2 marker:text-(--ai-primary)">
             {interests.books.map((book, i) => (
-              <li key={i} className="text-(--ai-text)/80 flex items-center gap-2">
-                <span className="w-1.5 h-1.5 rounded-full bg-(--ai-primary)/40" />
+              <li key={i} className="text-(--ai-text)/80 text-sm leading-relaxed">
                 {book}
               </li>
             ))}

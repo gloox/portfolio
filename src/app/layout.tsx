@@ -4,8 +4,8 @@ import { ThemeProvider } from "@/context/ThemeContext";
 import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
-  title: "Geet's PortfolioLM",
-  description: "AI Powered Portfolio",
+  title: "Geet's Portfolio",
+  description: "A Smarter Portfolio",
 };
 
 export default function RootLayout({

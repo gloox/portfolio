@@ -1,7 +1,6 @@
 import React from "react";
 import { motion, HTMLMotionProps } from "framer-motion";
 
-// Define the Props interface
 interface PopInProps extends HTMLMotionProps<"div"> {
   children: React.ReactNode;
   delay?: number;
