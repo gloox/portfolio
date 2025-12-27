@@ -36,7 +36,7 @@ export const SkillsSection = ({
               </Text>
               <div className="flex flex-wrap gap-2">
                 {(items as string[]).map((skill, i) => (
-                  <Bubble className="text-sm">{skill}</Bubble>
+                  <Bubble key={i} className="text-sm">{skill}</Bubble>
                 ))}
               </div>
             </div>

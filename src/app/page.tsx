@@ -14,16 +14,9 @@ import { AboutSection } from "@/components/AboutSection";
 const PortfolioPage = () => {
   const [data, setData] = useState<PortfolioData | null>(null);
   const [loading, setLoading] = useState(true);
-  const [stage, setStage] = useState<"intro" | "transition" | "home">("intro");
 
   useEffect(() => {
     const init = async () => {
-      const hasVisited = localStorage.getItem("portfolio_intro_completed");
-      if (hasVisited) {
-        setStage("home");
-      } else {
-        setLoading(false);
-      }
 
       try {
         const response = await fetch("/api/portfolio");
