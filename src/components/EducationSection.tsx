@@ -14,7 +14,6 @@ export const EducationSection = ({ education }: { education: Education[] }) => {
       <div className="space-y-8">
         {education.map((edu, index) => (
           <Card
-              className="bg-(--ai-background)"
               key={index}
           >
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">

@@ -5,6 +5,7 @@ import { Text } from "./basic/Text";
 import { Code2 } from "lucide-react";
 import {SectionTitle} from "@/components/basic/SectionTitle";
 import {Card} from "@/components/basic/Card";
+import {Bubble} from "@/components/basic/Bubble";
 
 export const ProjectsSection = ({ projects }: { projects: Project[] }) => {
   return (
@@ -34,12 +35,12 @@ export const ProjectsSection = ({ projects }: { projects: Project[] }) => {
 
             <div className="flex flex-wrap gap-2 mt-auto">
               {project.technologies.map((tech, i) => (
-                <span
+                <Bubble
                   key={i}
-                  className="px-3 py-1 text-xs font-medium rounded-[calc(var(--ai-radius)/2)] bg-(--ai-primary)/10 text-(--ai-primary) border border-(length:--ai-border-width) border-(--ai-primary)/20"
+                  className="text-xs"
                 >
                   {tech}
-                </span>
+                </Bubble>
               ))}
             </div>
           </Card>

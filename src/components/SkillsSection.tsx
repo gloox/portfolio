@@ -5,6 +5,7 @@ import { Text } from "./basic/Text";
 import { Code2 } from "lucide-react";
 import {SectionTitle} from "@/components/basic/SectionTitle";
 import {Card} from "@/components/basic/Card";
+import { Bubble } from "./basic/Bubble";
 
 interface SkillsSectionProps {
   skills: Skills;
@@ -35,13 +36,12 @@ export const SkillsSection = ({
               </Text>
               <div className="flex flex-wrap gap-2">
                 {(items as string[]).map((skill, i) => (
-                  <Text
-                    key={"text-" + skill}
-                    variant={"h4"}
-                    className="px-3 py-1.5 text-sm rounded-(--ai-radius) bg-(--ai-surface) border border-(length:--ai-border-width) border-(--ai-text)/20"
-                  >
-                    {skill}
-                  </Text>
+                    <Bubble
+                    className="text-sm"
+                    >
+                        {skill}
+                    </Bubble>
+
                 ))}
               </div>
             </div>

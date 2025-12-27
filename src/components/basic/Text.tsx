@@ -19,7 +19,7 @@ export const Text = ({
     "font-[family-name:var(--ai-font)] text-[var(--ai-text)] transition-colors duration-500";
 
   const variants = {
-    h1: "text-6xl font-extrabold tracking-tight",
+    h1: "text-6xl font-extrabold ",
     h2: "text-4xl font-semibold tracking-tight",
     h3: "text-2xl font-semibold tracking-tight",
     h4: "text-xl font-bold tracking-tight",

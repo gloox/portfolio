@@ -4,6 +4,7 @@ import { Text } from "./basic/Text";
 import { Book, Heart } from "lucide-react";
 import {SectionTitle} from "@/components/basic/SectionTitle";
 import {Card} from "@/components/basic/Card";
+import {Bubble} from "@/components/basic/Bubble";
 
 interface PersonalSectionProps {
   interests: {
@@ -42,12 +43,13 @@ export const PersonalSection = ({ interests }: PersonalSectionProps) => {
           </div>
           <div className="flex flex-wrap gap-2">
             {interests.hobbies.map((hobby, i) => (
-              <span
+
+              <Bubble
                 key={i}
-                className="px-3 py-1 rounded-full bg-(--ai-primary)/10 text-(--ai-primary) text-sm border border-(--ai-primary)/20"
+                className="text-sm"
               >
                 {hobby}
-              </span>
+              </Bubble>
             ))}
           </div>
         </Card>

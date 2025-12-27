@@ -45,61 +45,9 @@ const PortfolioPage = () => {
     init();
   }, []);
 
-  const handleIntroComplete = () => {
-    setStage("transition");
-  };
-
-  const finishTransition = () => {
-    localStorage.setItem("portfolio_intro_completed", "true");
-    setStage("home");
-  };
-
   if (loading || !data)
     return <div className="p-20 text-center">Loading...</div>;
 
-  if (stage === "intro") {
-    return (
-      <IntroSection onComplete={handleIntroComplete} />
-    );
-  }
-
-  if (stage === "transition") {
-    return (
-      <div
-        className={`
-            bg-(--ai-background)
-            transition-colors duration-500
-        `}
-      >
-        <Section className="min-h-screen flex flex-col justify-center items-center px-10 max-w-4xl mx-auto space-y-8 animate-in fade-in duration-1000">
-          <div className="space-y-6">
-            <Text variant="h2">
-              <Typewriter
-                text={`Ok, that was fun. Fun fact: this is actually a website to try to get me hired.`}
-                delay={0.1}
-              />
-            </Text>
-            <Text variant="h2" className="mt-4">
-              <Typewriter
-                text="Now, here's another textbox. Ask it any questions about me. It'll answer mostly honestly, but let's be honest, it is AI."
-                delay={3.5} // Wait for first sentence to finish
-              />
-            </Text>
-            <Text variant="h3" className="opacity-60 mt-4">
-              <Typewriter
-                text="(And look around this website you've designed!)"
-                delay={8.0}
-              />
-            </Text>
-          </div>
-
-          <PopIn delay={10}>
-            <Button onClick={finishTransition}>Let's Go</Button>
-          </PopIn>
-        </Section>
-      </div>
-    );
-  }
 
   return (
     <>

@@ -18,7 +18,6 @@ export const ExperienceSection = ({
       <div className="space-y-8">
         {experiences.map((job, index) => (
           <Card
-              className="bg-(--ai-background)"
             key={index}
           >
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-4">
