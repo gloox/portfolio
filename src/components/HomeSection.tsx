@@ -60,16 +60,12 @@ export const HomeSection: React.FC<HomeHeaderProps> = ({
         </Text>
       </div>
 
+      <Button href="/goto2048/index.html" target="_blank" rel="noopener noreferrer">
+        GOTO 2048
+      </Button>
+
       <Button href="/pixelChess/index.html" target="_blank" rel="noopener noreferrer">
         Play Pixel Chess
-      </Button>
-
-      <Button href="/ticTechToe/index.html" target="_blank" rel="noopener noreferrer">
-        Play Tic Tech Toe (mega buggy)
-      </Button>
-
-      <Button href="/goto2048/index.html" target="_blank" rel="noopener noreferrer">
-        Play 2048
       </Button>
 
       <div className="w-full max-w-2xl mt-8">
