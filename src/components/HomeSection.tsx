@@ -68,6 +68,10 @@ export const HomeSection: React.FC<HomeHeaderProps> = ({
         Play Tic Tech Toe (mega buggy)
       </Button>
 
+      <Button href="/goto2048/index.html" target="_blank" rel="noopener noreferrer">
+        Play 2048
+      </Button>
+
       <div className="w-full max-w-2xl mt-8">
         <div className="bg-(--ai-surface)/50 backdrop-blur-md p-1 rounded-(--ai-radius) shadow-xl border border-(--ai-text)/10 ring-4 ring-(--ai-text)/5">
           <form
