@@ -1,11 +1,12 @@
+
+
 {
+
   "personal": {
-    "title": "Computer Science Honours Student & Software Developer",
+    "title": "CS student at University of Manitoba",
     "email": "loombag@myumanitoba.ca",
-    "location": "Winnipeg",
-    "summary": "Highly motivated Computer Science student with a strong academic record and practical experience in full-stack development, database design, and workflow automation. Proven ability to independently manage the full software development lifecycle, leading to significant improvements in user efficiency.",
-    "linkedin": "https://www.linkedin.com/in/geet-loomba-a197bb2a1/",
-    "github": "https://github.com/gloox",
+    "location": "Winnipeg, Canada",
+    "summary": "Computer Science Honours student at the University of Manitoba with extensive full-stack co-op experience. Proven track record of independently shipping critical production tools, managing full software development lifecycles, and engineering high-performance backend systems.",
     "interests": {
       "books": [
         "Slaughter House 5",
@@ -15,7 +16,6 @@
       ],
       "hobbies": [
         "Weightlifting",
-        "Tech (duh)",
         "Anime",
         "Fashion History",
         "Podcasts",
@@ -41,164 +41,68 @@
   ],
   "experience": [
     {
-      "company": "Agriculture and Agri Food Canada",
+      "company": "Agriculture and Agri-Food Canada",
       "role": "Web Application Developer",
-      "dates": "Sep. to Dec. 2025 (Full-Time)",
+      "dates": "Sep. 2025 – Dec. 2025",
       "location": "Winnipeg, MB",
-      "description": "Full-stack development in a small team working on two major production websites.",
+      "description": "Full-stack development in an Agile environment delivering mission-critical web applications.",
       "bullets": [
-        "Spearheaded the complete front-end migration of the FIGE production application from Vue 2 to Vue 3 independently, modernizing the codebase for long-term maintainability.",
-        "Architected and developed 7+ administrative screens for the XMTS rewrite, implementing services that established a strict separation between controller and persistence layers.",
-        "Pioneered the team's front-end testing strategy by researching and integrating ViTest into a legacy Vue 2 environment, establishing the project's first automated test suite.",
-        "Engineered robust error handling for application initialization, preventing critical UI deadlocks during failed network requests, and resolved race conditions in file upload polling systems.",
-        "Designed a modular Notification System and refined the look-and-feel of complex financial reports (expenses and program payments) to enhance user experience.",
-        "Applied Test-Driven Development (TDD) methodologies to backend feature implementation, ensuring high code coverage and reducing regression bugs."
+        "Independently migrated a large, actively developed production application from Vue 2 to Vue 3 in 1.5 months, shipping ahead of schedule with strong mentor recognition for speed and quality.",
+        "Built 7+ React administrative screens; initiated technical design discussions with a senior developer that led to a revised componentization standard adopted project-wide.",
+        "Engineered a reusable Notification System using React Context for deployment across the company's suite of React applications.",
+        "Established the team’s first automated frontend test suite by integrating Vitest into a legacy Vue 2 environment and wrote component tests as practical templates for future developers."
       ]
     },
     {
-      "company": "Public Guardian And Trustee of Manitoba",
-      "role": "Systems Step Student",
-      "dates": "Apr. 2024 – Aug. 2024, Jan. 2025 - Apr. 2025 (Full-Time); Sep. 2024 – Dec. 2024 (Part-Time)",
+      "company": "Public Guardian and Trustee of Manitoba",
+      "role": "Systems Student",
+      "dates": "Apr. 2024 – Apr. 2025",
       "location": "Winnipeg, MB",
-      "description": "Managed the full software development lifecycle for internal windows tools and collaborated on core enterprise applications.",
+      "description": "Managed the full software development lifecycle for internal windows tools and collaborated on core enterprise system modernizations.",
       "bullets": [
-        "Developed and launched an internal .NET/WinForms search engine tool, independently managing its lifecycle over two months, significantly improving the mail department's efficiency via a unified and intuitive user interface.",
-        "Implemented advanced features in the search tool, including fuzzy search and asynchronous caching capabilities, resulting in extremely positive user feedback.",
-        "Collaborated with a senior developer on a large .NET/WinForms application, contributing heavily to UI iteration, database design, and feature development.",
-        "Proposed and implemented database optimizations that reduced data redundancy and improved overall database safety and integrity.",
-        "Engineered features to streamline daily operations within the large .NET/WinForms codebase.",
-        "Automated and optimized accounting workflows using Laserfiche with JavaScript and CSS.",
-        "Implemented VBA processes for automated data updates and imports to improve database integrity."
+        "Independently built a .NET/WinForms client search tool over 2 months, taking full ownership of the entire SDLC and implementing fuzzy search with a local asynchronous cache handling 100,000+ records to significantly optimize mailroom workflows.",
+        "Collaborated closely with a senior developer on a legacy modernization of the company's core trustee management system, participating in client design meetings and proposing UI mockups adopted into production.",
+        "Evaluated system architecture and proposed database normalization improvements during structural design reviews that were successfully adopted into production.",
+        "Automated and optimized internal accounting workflows using Laserfiche integrated with JavaScript and CSS.",
+        "Implemented VBA processes for automated data updates and imports to ensure database integrity."
       ]
     }
   ],
   "projects": [
     {
-      "name": "TBC: Crabby Game: A 2D Platformer with a Crab-themed Theme",
-      "role": "Team Lead, Developer",
-      "gitHub": "https://github.com/gloox/CrabbyGame",
-      "link": "link to project",
-      "date": "Nov. 2025",
-      "technologies": ["Python", "pygame"],
-      "description": "Won audience choice and most potential (based on highest critic ratings on game quality and game mechanics) for the CSSA Game Jam 2025: Crabby Game."
+      "name": "CO-APP (Software Engineering Group Project)",
+      "role": "Full-Stack Developer",
+      "dates": "Jan. 2026 – Apr. 2026",
+      "technologies": ["Java", "Spring Boot", "MongoDB", "React", "k6", "Vitest"],
+      "description": "Engineered a Job Application REST API and filtering backend across two Agile sprints, implementing paginated results, multi-status filtering, keyword search, and interview date-range queries.",
+      "bullets": [
+        "Authored all cross-feature integration tests for the team alongside full unit test coverage, achieving near-complete line and branch coverage validated via Codecov in CI.",
+        "Configured the Render hosting environment and designed a k6 load test across 14 endpoints and 20 concurrent users, achieving a 100% check pass rate and exceeding the target throughput by 747% (1,694 req/min)."
+      ]
     },
     {
-      "name": "TBC: WhirlyBird Clone",
-      "role": "Developer",
-      "gitHub": "https://github.com/gloox/CrabbyGame",
-      "link": "link to project",
-      "dates": "2021, Jan. 2024",
-      "technologies": ["Python", "pygame"],
-      "description": "Created a local multiplayer chess application with an interactive Pygame interface."
-    },
-    {
-      "name": "TBC: Something similar to the yard website for dear hank and john or for all pods I listen to",
-      "role": "Developer",
-      "gitHub": "https://github.com/gloox/CrabbyGame",
-      "link": "link to project",
-      "dates": "2021, Jan. 2024",
-      "technologies": ["Python", "pygame"],
-      "description": "Created a local multiplayer chess application with an interactive Pygame interface."
-    },
-    {
-      "name": "TBC: This Website",
-      "role": "Developer",
-      "gitHub": "https://github.com/gloox/CrabbyGame",
-      "link": "link to project",
-      "dates": "2021, Jan. 2024",
-      "technologies": ["Python", "pygame"],
-      "description": "Created a local multiplayer chess application with an interactive Pygame interface."
-    },
-    {
-      "name": "Grind Fuel Project Manager",
-      "role": "Team Lead, Full-stack developer (Software Engineering Group Project)",
-      "gitHub": "https://github.com/gloox/CrabbyGame",
-      "link": "https://jremp.github.io/grindfuel/",
-      "dates": "May 2025 – Current",
-      "technologies": ["MySQL", "Java", "Swing"],
-      "description": "Developing a project management software using Java (Swing), applying core software engineering principles."
-    },
-    {
-      "name": "GROCER",
-      "role": "Collaborative Developer (Human Computer Interaction Group Project)",
-      "gitHub": "https://github.com/gloox/CrabbyGame",
-      "link": "link to project",
-      "dates": "Sep. 2024 – Dec. 2024",
-      "technologies": ["JavaScript", "HTML/CSS"],
-      "description": "Collaboratively developed a grocery website using an iterative user-oriented design process through user stories, interviews, paper prototypes, and a horizontal prototype."
-    },
-    {
-      "name": "SchoolTools",
-      "role": "Collaborative Developer (Web App Project)",
-      "gitHub": "https://github.com/gloox/CrabbyGame",
-      "link": "link to project",
-      "dates": "Apr. 2023 – Jan. 2025",
-      "technologies": ["React", "JavaScript", "HTML/CSS"],
-      "description": "Developed features for a web application, including a grade calculator, PDF merger, and PDF-to-text converter."
-    },
-    {
-      "name": "Movie Analysis Database",
-      "role": "Developer (Databases Group Project)",
-      "gitHub": "https://github.com/gloox/CrabbyGame",
-      "link": "link to project",
-      "dates": "Sept. 2023 – Dec. 2023",
-      "technologies": ["MySQL", "Java"],
-      "description": "Designed and developed a normalized database, including a console interface and 40 complex SQL queries."
-    },
-    {
-      "name": "Pixel Chess",
-      "role": "Developer",
-      "gitHub": "https://github.com/gloox/CrabbyGame",
-      "link": "link to project",
-      "dates": "2021, Jan. 2024",
-      "technologies": ["Python", "pygame"],
-      "description": "Created a local multiplayer chess application with an interactive Pygame interface."
+      "name": "CSSA Game Jam 2025: Crabby Game",
+      "role": "Team Lead & Core Developer",
+      "dates": "Nov. 2025",
+      "technologies": ["Godot Engine", "GDScript"],
+      "description": "Won Audience Choice and Highest Potential awards (highest critic ratings for game quality and mechanics) out of the entire competition framework.",
+      "bullets": [
+        "Created and led a 4-person development team, directing scope adjustments and assigning work to keep the project shippable within a strict 48-hour deadline.",
+        "Implemented player movement mechanics, a modular character controller, the combat system (hitboxes, damage, knockback), and round-based evolution logic with no prior experience in the engine."
+      ]
     }
   ],
   "skills": {
-    "languages": [
-      "C#",
-      "Java",
-      "MySQL",
-      "SQLite",
-      "Python",
-      "JavaScript",
-      "HTML/CSS",
-      "C",
-      "C++"
-    ],
-    "librariesFrameworks": [
-      "Vue 2/3",
-      "godot",
-      "React",
-      ".NET",
-      "Winforms",
-      "Syncfusion",
-      "pygame"
-    ],
-    "developmentTools": [
-      "Podman",
-      "Visual Studio",
-      "Jira",
-      "Azure DevOps Server",
-      "GitHub",
-      "Microsoft SQL Server",
-      "Laserfiche",
-      "VS Code"
-    ]
+    "languages": ["Java", "C#", "JavaScript", "TypeScript", "Python", "GDScript", "SQL", "C", "C++", "HTML/CSS"],
+    "librariesFrameworks": ["Spring Boot", "React", "Vue 2/3", ".NET Framework", "WinForms", "Syncfusion", "Godot Engine", "Pygame"],
+    "developmentTools": ["MongoDB", "MySQL", "Docker", "GitHub Actions", "Render", "k6", "Vitest", "Azure DevOps", "Jira", "Laserfiche", "Visual Studio", "VS Code"]
   },
   "extracurricular": [
-    {
-      "activity": "CSSA Game Jame 2025: Crabby Game",
-      "organization": "University Of Manitoba",
-      "date": "Nov. 2025",
-      "details": "Won audience choice and most potential (based on highest critic ratings on game quality and game mechanics) for the CSSA Game Jam 2025: Crabby Game."
-    },
     {
       "activity": "CSSA Capture the Flag Competition",
       "organization": "University Of Manitoba",
       "date": "Sept. 2023",
-      "details": "Employed problem-solving abilities, research skills, and teamwork while focusing on stenographic and other cryptographic problems."
+      "details": "Employed logical problem-solving, system research, and teamwork to break down steganographic and cryptographic security challenges."
     }
   ]
 }
