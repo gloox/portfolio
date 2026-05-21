@@ -1,7 +1,4 @@
-
-
 {
-
   "personal": {
     "title": "CS student at University of Manitoba",
     "email": "loombag@myumanitoba.ca",
@@ -73,7 +70,14 @@
       "name": "CO-APP (Software Engineering Group Project)",
       "role": "Full-Stack Developer",
       "dates": "Jan. 2026 – Apr. 2026",
-      "technologies": ["Java", "Spring Boot", "MongoDB", "React", "k6", "Vitest"],
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "MongoDB",
+        "React",
+        "k6",
+        "Vitest"
+      ],
       "description": "Engineered a Job Application REST API and filtering backend across two Agile sprints, implementing paginated results, multi-status filtering, keyword search, and interview date-range queries.",
       "bullets": [
         "Authored all cross-feature integration tests for the team alongside full unit test coverage, achieving near-complete line and branch coverage validated via Codecov in CI.",
@@ -93,9 +97,42 @@
     }
   ],
   "skills": {
-    "languages": ["Java", "C#", "JavaScript", "TypeScript", "Python", "GDScript", "SQL", "C", "C++", "HTML/CSS"],
-    "librariesFrameworks": ["Spring Boot", "React", "Vue 2/3", ".NET Framework", "WinForms", "Syncfusion", "Godot Engine", "Pygame"],
-    "developmentTools": ["MongoDB", "MySQL", "Docker", "GitHub Actions", "Render", "k6", "Vitest", "Azure DevOps", "Jira", "Laserfiche", "Visual Studio", "VS Code"]
+    "languages": [
+      "Java",
+      "C#",
+      "JavaScript",
+      "TypeScript",
+      "Python",
+      "GDScript",
+      "SQL",
+      "C",
+      "C++",
+      "HTML/CSS"
+    ],
+    "librariesFrameworks": [
+      "Spring Boot",
+      "React",
+      "Vue 2/3",
+      ".NET Framework",
+      "WinForms",
+      "Syncfusion",
+      "Godot Engine",
+      "Pygame"
+    ],
+    "developmentTools": [
+      "MongoDB",
+      "MySQL",
+      "Docker",
+      "GitHub Actions",
+      "Render",
+      "k6",
+      "Vitest",
+      "Azure DevOps",
+      "Jira",
+      "Laserfiche",
+      "Visual Studio",
+      "VS Code"
+    ]
   },
   "extracurricular": [
     {

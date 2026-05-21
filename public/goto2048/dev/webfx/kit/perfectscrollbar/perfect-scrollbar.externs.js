@@ -5,6 +5,6 @@
 /**
  * @constructor
  */
-var PerfectScrollbar = function(container, options) {};
+var PerfectScrollbar = function (container, options) {};
 
-PerfectScrollbar.prototype.update = function() {};
+PerfectScrollbar.prototype.update = function () {};

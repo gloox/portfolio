@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from "@/context/ThemeContext";
 import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
-  title: "Geet's Portfolio",
+  title: "Geet's Website",
+  description:
+    "Computer Science Honours Student & Full-Stack Software Developer based in Winnipeg. Look at my software projects, engineering history, and technical skills.",
 };
 
 export default function RootLayout({
@@ -15,9 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ThemeProvider>
-          <main>{children}</main>
-        </ThemeProvider>
+        <main>{children}</main>
         <Analytics />
       </body>
     </html>

@@ -1,22 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --ai-background: #ffffff;
-  --ai-text: #000000;
-  --ai-surface: #f3f4f6;
-  --ai-primary: #4f46e5;
-  --ai-primary-hover: #4338ca;
-  --ai-secondary: #4b5563;
-  --ai-radius: 0.5rem;
-  --ai-border-width: 1px;
-  --font-current: var(--font-sans);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #fcfbf9;
+  --foreground: #171717;
 }
 
 body {
