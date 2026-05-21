@@ -5,7 +5,6 @@ import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   title: "Geet's Portfolio",
-  description: "A Smarter Portfolio",
 };
 
 export default function RootLayout({
